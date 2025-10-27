@@ -1,10 +1,18 @@
+import Banner from '@/components/Banner'
+import Navbar from '@/components/navbar'
+import TopHeader from '@/components/TopHeader'
 import React from 'react'
 
 const Home = () => {
     return (
         <div>
-          <h1>H1 Font inter css defined style.css</h1>
-          <h2>H2 Font lora css defined style.css</h2>
+          <TopHeader/>
+
+          <Navbar/>
+
+          <Banner/>
+
+
         </div>
     )
 }
