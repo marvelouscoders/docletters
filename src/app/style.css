@@ -1,0 +1,9 @@
+@reference "./globals.css";
+
+h1 {
+    @apply text-3xl md:text-4xl lg:text-6xl font-semibold font-inter mb-6;
+}
+
+h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold font-lora mb-6;
+}
