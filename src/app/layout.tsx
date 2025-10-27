@@ -28,7 +28,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${lora.variable} antialiased`}
       >
+        <div className="font-inter">
         {children}
+        </div>
       </body>
     </html>
   );
