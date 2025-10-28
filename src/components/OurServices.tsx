@@ -4,7 +4,7 @@ import { FiPlus } from "react-icons/fi";
 
 const OurServices = () => {
   return (
-    <section className="fluid-container bg-skyblue py-16">
+    <section className="fluid-container bg-skyblue py-16 pt-16 mt-12">
       <div className="theme-container flex flex-col lg:flex-row items-center lg:gap-x-28 gap-y-12">
         <div className="relative w-full lg:w-[38%] bg-white">
           <div className="relative w-full">
@@ -18,7 +18,7 @@ const OurServices = () => {
             <div className="absolute inset-0 bg-gray/60"></div>
           </div>
 
-          <div className="absolute lg:right-[-120px] right-6 top-1/2 -translate-y-1/2 bg-navyorange text-white px-10 py-8 shadow-lg">
+          <div className="absolute lg:right-[-120px] right-6 top-1/2 -translate-y-1/2 bg-navygreen text-white px-10 py-8 shadow-lg">
             <h2>58</h2>
             <h3 className="text-white">Best doctors in the field</h3>
           </div>
@@ -53,16 +53,16 @@ const OurServices = () => {
                   key={i}
                   className="flex items-center gap-2 border-b border-gray-200 pb-2 hover:text-darkorange"
                 >
-                  <FiPlus className="text-navyorange text-xl" />
+                  <FiPlus className="text-navygreen text-xl" />
                   <span>{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 flex items-center gap-2 text-navyorange font-semibold hover:underline cursor-pointer">
+            <div className="mt-10 flex items-center gap-2 text-navygreen font-semibold hover:underline cursor-pointer">
               <span>View All Departments</span>
-              <div className="border border-darkorange p-1">
-                <FiPlus className="text-navyorange" />
+              <div className="border border-navygreen p-1">
+                <FiPlus className="text-navygreen" />
               </div>
             </div>
           </div>

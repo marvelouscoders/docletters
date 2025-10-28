@@ -1,8 +1,12 @@
 @reference "./globals.css";
 
 p{
-  @apply text-gray text-base mt-4
+  @apply text-gray-950 text-base mt-4
 }
+p.text-white {
+  @apply text-white;
+}
+
 
 h1 {
     @apply text-2xl md:text-4xl lg:text-5xl font-semibold font-lora mb-4;
@@ -12,7 +16,11 @@ h2 {
     @apply text-2xl md:text-3xl lg:text-3xl font-semibold font-lora mb-4 mt-4;
 }
 h4{
-  @apply text-xl md:text-2xl lg:text-2xl font-semibold font-lora mb-4 text-gray-400
+  @apply text-xl md:text-2xl lg:text-2xl font-semibold font-lora mb-6 text-gray
+}
+
+h5{
+  @apply text-base md:text-lg lg:text-xl font-semibold font-lora mb-3 text-dark
 }
 
 h6{
@@ -36,6 +44,6 @@ h6{
   }
 
   .mobile-padding{
-    @apply mt-20 mb-20
+    @apply mt-20 mb-16
   }
 }

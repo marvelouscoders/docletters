@@ -5,8 +5,8 @@ import { FaHospitalUser, FaStethoscope } from "react-icons/fa";
 
 const InfoSection = () => {
   return (
-    <section className="fluid-container bg-white">
-      <div className="theme-container mobile-padding grid grid-cols-1 md:grid-cols-3 border border-gray-300">
+    <section className="fluid-container bg-white mobile-padding">
+      <div className="theme-container  grid grid-cols-1 md:grid-cols-3 border border-gray-300">
         {/* Card 1 */}
         <div className="flex flex-col justify-between p-6 border-b md:border-b-0 md:border-r border-gray-300 transition-all">
           <div className="flex items-center justify-between mb-4">
@@ -17,7 +17,7 @@ const InfoSection = () => {
             Search for a HealthCare Clinic expert by specialty, disease,
             condition, expertise, or doctor’s last name.
           </p>
-          <button className="flex items-center gap-2 text-navyorange font-medium hover:underline mt-3">
+          <button className="flex items-center gap-2 text-navygreen font-medium hover:underline mt-3">
             Find a Doctor <CiCirclePlus className="text-2xl" />
           </button>
         </div>
@@ -32,7 +32,7 @@ const InfoSection = () => {
             Explore our comprehensive healthcare services available for patients
             of all ages and needs.
           </p>
-          <button className="flex items-center gap-2 text-navyorange font-medium hover:underline mt-3">
+          <button className="flex items-center gap-2 text-navygreen font-medium hover:underline mt-3">
             Get Direction <CiCirclePlus className="text-2xl" />
           </button>
         </div>
@@ -47,7 +47,7 @@ const InfoSection = () => {
             Schedule your appointment easily with our online booking system in
             just a few clicks.
           </p>
-          <button className="flex items-center gap-2 text-navyorange font-medium hover:underline mt-3">
+          <button className="flex items-center gap-2 text-navygreen font-medium hover:underline mt-3">
             Book Now <CiCirclePlus className="text-2xl" />
           </button>
         </div>

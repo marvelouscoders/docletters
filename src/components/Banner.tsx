@@ -11,14 +11,14 @@ const Banner = () => {
           src="/assets/images/home-6-1.jpg"
           alt="background"
           fill
-          className="object-cover object-center md:object-cover object-contain md:object-center"
+          className="object-cover object-center md:object-cover  md:object-center"
           priority
         />
       </div>
 
       {/* ✅ Content */}
-      <div className="theme-container flex flex-col md:flex-row items-center justify-between px-6 py-16 md:py-24 gap-8 relative z-10">
-        <div className="fluid-container md:w-1/2 bg-white/90 shadow-lg border-l-8 border-navyorange px-6 py-8 backdrop-blur-sm">
+      <div className="theme-container flex flex-col md:flex-row items-start justify-between px-6 py-16 md:py-24 gap-8 relative z-10">
+        <div className="fluid-container md:w-1/2 bg-white/90 shadow-lg border-l-8 border-navygreen px-6 py-8 backdrop-blur-sm">
           <h6>Quality Health Care</h6>
           <h1>Your Health is Our Main Priority</h1>
           <p>
@@ -27,7 +27,7 @@ const Banner = () => {
           </p>
 
           <button className="mt-6 flex items-center gap-2 text-navyorange font-medium hover:underline">
-            Book Appointment <FiPlusCircle className="text-navyorange text-xl" />
+            Book Appointment <FiPlusCircle className="text-navygreen text-xl" />
           </button>
         </div>
       </div>
