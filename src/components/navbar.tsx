@@ -1,189 +1,132 @@
 "use client";
+
+import * as React from "react";
 import Image from "next/image";
-import { useState } from "react";
-import { FiChevronDown } from "react-icons/fi";
 import Link from "next/link";
+import { Menu, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
+export default function Navbar() {
+  const [openMenu, setOpenMenu] = React.useState<string | null>(null);
 
-  const handleDropdown = (menu) =>  {
-    setOpenDropdown(openDropdown === menu ? null : menu);
-  };
+  const menuItems = [
+    {
+      title: "Departments",
+      items: [
+        "Cardiology",
+        "Neurology",
+        "Orthopedics",
+        "Radiology",
+        "Emergency",
+        "MRI Labs",
+        "Urology",
+        "Psychology",
+        "Dermatology",
+        "Pediatrics",
+      ],
+    },
+    {
+      title: "Doctors",
+      items: [
+        "Dr. John Smith",
+        "Dr. Emily Carter",
+        "Dr. James Lee",
+        "Dr. Sophia Khan",
+        "Dr. Michael Brown",
+        "Dr. Sarah Wilson",
+        "Dr. Ali Raza",
+        "Dr. Maria Noor",
+      ],
+    },
+    {
+      title: "Patients & Visitors",
+      items: [
+        "Visitor Guidelines",
+        "Insurance Info",
+        "Billing & Support",
+        "Patient Rights",
+        "Health Records",
+        "Covid-19 Info",
+        "Room Facilities",
+        "Transport & Parking",
+      ],
+    },
+  ];
 
   return (
-    <nav className="w-full bg-white shadow-sm relative z-50">
-      <div className="  flex items-center justify-between px-8 py-6">
-        {/* ✅ Logo */}
+    <nav className="fluid-container border-b border-gray-200 relative z-50">
+      <div className=" flex items-center justify-between px-8 py-6">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/assets/images/svgfiles/logo-6.svg"
             alt="logo"
-            width={140}
-            height={80}
+            width={150}
+            height={90}
           />
         </Link>
+        <ul className="hidden md:flex items-center gap-10 relative">
+          <li>
+            <Link
+              href="/"
+              className="font-medium text-navyorange hover:text-navyorange"
+            >
+              Home
+            </Link>
+          </li>
 
-        {/* ✅ Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-          <Link href="#" className="text-red-500 hover:text-red-600">
-            Home
-          </Link>
-
-          {/* Departments */}
-          <div
-            className="relative group"
-            onMouseEnter={() => handleDropdown("departments")}
-            onMouseLeave={() => handleDropdown(null)}
+          {menuItems.map((menu) => (
+            <li
+              key={menu.title}
+              className="relative group"
+              onMouseEnter={() => setOpenMenu(menu.title)}
+              onMouseLeave={() => setOpenMenu(null)}
+            >
+              <button
+                className={`font-medium text-dark hover:text-navyorange transition ${
+                  openMenu === menu.title ? "text-navyorange" : ""
+                }`}
+              >
+                {menu.title}
+              </button>
+              {openMenu === menu.title && (
+                <div
+                  className="
+                    absolute left-1/2 top-full 
+                    -translate-x-1/2  
+                    bg-white shadow-2xl border border-gray-100 
+                    rounded-xl w-[500px] transition-all
+                  "
+                >
+                  <div className="grid grid-cols-2 gap-2 p-6">
+                    {menu.items.map((item) => (
+                      <Link
+                        key={item}
+                        href="#"
+                        className="flex items-center justify-between py-2 px-3 rounded-md hover:bg-gray-100 transition"
+                      >
+                        <span className="text-gray hover:text-navyorange text-[14px] font-medium">
+                          {item}
+                        </span>
+                        <ChevronRight className="h-4 w-4 text-dark hover:text-navyorange" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </li>
+          ))}
+          <Button
+            variant="outline"
+            className="border-navyorange text-navyorange hover:bg-navyorange hover:text-white font-semibold transition-all duration-300 px-8 py-6"
           >
-            <button className="flex items-center gap-1 hover:text-red-500">
-              Departments <FiChevronDown />
-            </button>
-            {openDropdown === "departments" && (
-              <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg py-2">
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Cardiology
-                </Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Neurology
-                </Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Orthopedics
-                </Link>
-              </div>
-            )}
-          </div>
-
-          {/* Doctors */}
-          <div
-            className="relative group"
-            onMouseEnter={() => handleDropdown("doctors")}
-            onMouseLeave={() => handleDropdown(null)}
-          >
-            <button className="flex items-center gap-1 hover:text-red-500">
-              Doctors <FiChevronDown />
-            </button>
-            {openDropdown === "doctors" && (
-              <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg py-2">
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Dr. John Smith
-                </Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Dr. Emily Carter
-                </Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Dr. James Lee
-                </Link>
-              </div>
-            )}
-          </div>
-
-          {/* Patients & Visitors */}
-          <div
-            className="relative group"
-            onMouseEnter={() => handleDropdown("patients")}
-            onMouseLeave={() => handleDropdown(null)}
-          >
-            <button className="flex items-center gap-1 hover:text-red-500">
-              Patients & Visitors <FiChevronDown />
-            </button>
-            {openDropdown === "patients" && (
-              <div className="absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg py-2">
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Visitor Guidelines
-                </Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Insurance Info
-                </Link>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Billing & Support
-                </Link>
-              </div>
-            )}
-          </div>
-
-          {/* Appointment Button */}
-          <button className="text-xl border-2 border-red-500 text-red-500 px-5 py-2 rounded font-medium hover:bg-red-500 hover:text-white transition">
             Appointment
-          </button>
-        </div>
+          </Button>
+           </ul>
 
-        {/* ✅ Mobile Menu Button */}
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          ☰
+        <button className="md:hidden">
+          <Menu className="h-6 w-6" />
         </button>
       </div>
-
-      {/* ✅ Mobile Dropdown Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-gray-50 border-t text-gray-700 px-6 py-4 space-y-2">
-          <Link href="#" className="block hover:text-red-500">
-            Home
-          </Link>
-
-          {/* Mobile Dropdowns */}
-          <details>
-            <summary className="cursor-pointer flex items-center gap-1">
-              Departments <FiChevronDown />
-            </summary>
-            <div className="pl-4 mt-2 space-y-1">
-              <Link href="#" className="block hover:text-red-500">
-                Cardiology
-              </Link>
-              <Link href="#" className="block hover:text-red-500">
-                Neurology
-              </Link>
-              <Link href="#" className="block hover:text-red-500">
-                Orthopedics
-              </Link>
-            </div>
-          </details>
-
-          <details>
-            <summary className="cursor-pointer flex items-center gap-1">
-              Doctors <FiChevronDown />
-            </summary>
-            <div className="pl-4 mt-2 space-y-1">
-              <Link href="#" className="block hover:text-red-500">
-                Dr. John Smith
-              </Link>
-              <Link href="#" className="block hover:text-red-500">
-                Dr. Emily Carter
-              </Link>
-              <Link href="#" className="block hover:text-red-500">
-                Dr. James Lee
-              </Link>
-            </div>
-          </details>
-
-          <details>
-            <summary className="cursor-pointer flex items-center gap-1">
-              Patients & Visitors <FiChevronDown />
-            </summary>
-            <div className="pl-4 mt-2 space-y-1">
-              <Link href="#" className="block hover:text-red-500">
-                Visitor Guidelines
-              </Link>
-              <Link href="#" className="block hover:text-red-500">
-                Insurance Info
-              </Link>
-              <Link href="#" className="block hover:text-red-500">
-                Billing & Support
-              </Link>
-            </div>
-          </details>
-
-          <button className="w-full border-2 border-red-500 text-red-500 px-4 py-2 rounded font-medium hover:bg-red-500 hover:text-white transition">
-            Appointment
-          </button>
-        </div>
-      )}
     </nav>
   );
-};
-
-export default Navbar;
+}

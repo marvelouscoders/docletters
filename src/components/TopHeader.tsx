@@ -7,7 +7,7 @@ import { WiTime3 } from "react-icons/wi";
 const TopHeader = () => {
   return (
     <div className="topheader-container">
-      <div className=" flex flex-col md:flex-row items-center justify-between  py-3 gap-2 px-8">
+      <div className=" flex flex-col md:flex-row items-center justify-between  py-4 gap-2 px-8">
         <div className="flex flex-wrap items-start gap-4 text-base font-inter">
           <span className="flex items-center ">
             <IoLocationOutline className="text-orange " /> Brooklyn, NY 10036, United States

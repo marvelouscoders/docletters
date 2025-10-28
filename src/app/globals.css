@@ -7,6 +7,10 @@
 
   --color-orange: #b12828; 
   --color-darkorange: #B12828;
+  --color-navyorange:#EC4949;
+  --color-dark:#191414;
+  --color-gray:#4f4f4f;
+  --color-skyblue:#F9FAFB;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-lora: var(--font-lora);
