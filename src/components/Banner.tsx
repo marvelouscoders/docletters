@@ -1,33 +1,61 @@
 "use client";
 import Image from "next/image";
-import { FiPlusCircle } from "react-icons/fi";
+import { CiMobile3 } from "react-icons/ci";
+import { FaUserDoctor } from "react-icons/fa6";
+import { MdOutlineChevronRight } from "react-icons/md";
 
 const Banner = () => {
   return (
     <section className="relative w-full overflow-hidden">
-      {/* ✅ Background Image (same for all devices) */}
+      {/* ✅ Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/assets/images/home-6-1.jpg"
+          src="/assets/images/banner1.jpg"
           alt="background"
           fill
-          className="object-cover object-center md:object-cover  md:object-center"
           priority
+          className="object-cover object-center md:object-center brightness-95"
         />
+        <div className="absolute inset-0 bg-black/10"></div>
+
+        {/* ✅ Bottom Green Bar (desktop/tablet only) */}
+        <div className="hidden md:block absolute bottom-0 w-full h-15 bg-navygreen">
+          <div className="theme-container px-6 flex items-center justify-between h-full">
+            <div className="flex items-center gap-2 text-white text-sm">
+              <CiMobile3 className="text-white text-sm" />
+              <span>100% online - hassle-free, stress-free</span>
+            </div>
+            <div className="h-6 w-px bg-white/50"></div>
+            <div className="flex items-center gap-2 text-white text-sm">
+              <FaUserDoctor className="text-white text-base" />
+              <span>100% online - hassle-free, stress-free</span>
+            </div>
+            <div className="h-6 w-px bg-white/50"></div>
+            <div className="flex items-center gap-2 text-white text-sm">
+              <FaUserDoctor className="text-white text-sm" />
+              <span>100% online - hassle-free, stress-free</span>
+            </div>
+            <div className="h-6 w-px bg-white/50"></div>
+            <div className="flex items-center gap-2 text-white text-sm">
+              <CiMobile3 className="text-white text-base" />
+              <span>100% online - hassle-free, stress-free</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* ✅ Content */}
-      <div className="theme-container flex flex-col md:flex-row items-start justify-between px-6 py-16 md:py-24 gap-8 relative z-10">
-        <div className="fluid-container md:w-1/2 bg-white/90 shadow-lg border-l-8 border-navygreen px-6 py-8 backdrop-blur-sm">
-          <h6>Quality Health Care</h6>
-          <h1>Your Health is Our Main Priority</h1>
+      {/* ✅ Content Section */}
+      <div className="theme-container flex flex-col md:flex-row items-start px-6 py-20 md:py-28 relative z-10">
+        <div className="md:w-[40%] w-full bg-white/90 shadow-xl border-8 border-skyblue px-8 py-10 backdrop-blur-sm text-center md:text-left">
+          <h1>
+            Same-day trusted medical letters & certificates
+          </h1>
           <p>
-            When you are sick or have become injured and need to see a doctor fast,
-            waiting is not an option.
+            Get a medical certificate from a private NHS doctor today without the hassle of waiting for a GP appointment.
           </p>
 
-          <button className="mt-6 flex items-center gap-2 text-navyorange font-medium hover:underline">
-            Book Appointment <FiPlusCircle className="text-navygreen text-xl" />
+          <button className="mt-4 flex items-center gap-2 justify-center md:justify-start text-navyorange font-semibold hover:underline text-navygreen">
+            Get Started <MdOutlineChevronRight className="bg-navygreen text-white text-xl" />
           </button>
         </div>
       </div>
