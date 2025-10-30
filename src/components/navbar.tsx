@@ -96,7 +96,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full border-b border-bggray relative z-50 font-inter">
+    <nav className="fluid-conatiner border-b border-bggray relative z-50 font-inter">
       <div className="flex flex-col xl:flex-row xl:items-center justify-between px-6 py-3 md:px-8 transition-all duration-300">
 
         {/* --- Logo + Toggle (Mobile + Small Desktop) --- */}
@@ -174,10 +174,10 @@ export default function Navbar() {
                   </div>
 
                  <div
-  className={`${
-    menu.singleColumn ? "grid-cols-1" : "grid-cols-2"
-  } grid gap-y-2 gap-x-3 px-4 py-2`}
->
+                    className={`${
+                      menu.singleColumn ? "grid-cols-1" : "grid-cols-2"
+                    } grid gap-y-2 gap-x-3 px-4 py-2`}
+                  >
 
                     {menu.items.map((item) => (
                       <Link
