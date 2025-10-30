@@ -6,7 +6,7 @@ const TopHeader = () => {
   return (
     <div className="topheader-container relative">
       {/* Top Green Bar */}
-      <div className="w-full bg-navygreen text-white text-center py-1 md:py-2 text-sm">
+      <div className="w-full bg-navygreen text-white text-center py-1 md:py-2 text-sm pt-4 pb-4">
         Get 10% off with the code: <span className="font-bold">Winter25</span>
       </div>
 
@@ -26,7 +26,8 @@ const TopHeader = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-wrap items-center gap-4 md:gap-6 text-sm font-inter text-gray w-full md:w-auto justify-center md:justify-end mt-2 md:mt-0">
+        <div className="flex flex-wrap items-center gap-4 md:gap-6 text-sm font-inter text-gray w-full md:w-auto justify-start md:justify-end mt-2 md:mt-0">
+
           <span className="flex items-center gap-2 cursor-pointer transition">
             <FaUser className="text-dark text-base md:text-sm" />
             <span className="text-[15px] md:text-sm text-gray">Account</span>
