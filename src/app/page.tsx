@@ -2,6 +2,7 @@ import Banner from '@/components/Banner'
 import Navbar from '@/components/navbar'
 import Service from '@/components/Services'
 import TopHeader from '@/components/TopHeader'
+import FindUs from '@/components/FindUs'
 
 const Home = () => {
     return (
@@ -13,6 +14,8 @@ const Home = () => {
           <Banner/>
 
           <Service/>
+
+          <FindUs/>
 
 
         </div>
