@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { CiMobile3 } from "react-icons/ci";
 import { FaUserDoctor } from "react-icons/fa6";
 import { MdOutlineChevronRight } from "react-icons/md";
@@ -53,10 +54,11 @@ const Banner = () => {
           <p>
             Get a medical certificate from a private NHS doctor today without the hassle of waiting for a GP appointment.
           </p>
-
+          <Link href="/">
           <button className="mt-4 flex items-center gap-2 justify-center md:justify-start text-navyorange font-semibold hover:underline text-navygreen">
-            Get Started <MdOutlineChevronRight className="bg-navygreen text-white text-xl" />
+            Get Started <MdOutlineChevronRight className="bg-navygreen text-white text-xl rounded-full" />
           </button>
+          </Link>
         </div>
       </div>
     </section>

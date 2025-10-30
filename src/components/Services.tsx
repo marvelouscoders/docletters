@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 interface Feature {
   title: string;
@@ -87,11 +88,14 @@ const Service = () => {
               </div>
 
               {/* Button */}
+              
               <div className="mt-4 px-2 mb-4">
-                <button className="text-navygreen flex items-center gap-2 font-semibold font-inter">
-                  BUY NOW{" "}
+                <Link href="/">
+                <button className="text-navygreen flex items-center gap-2 font-semibold font-inter hover:">
+                  BUY NOW
                   <ChevronRight className="text-white bg-navygreen rounded-full" />
                 </button>
+                </Link>
               </div>
             </div>
           </div>

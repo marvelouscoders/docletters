@@ -3,7 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, ChevronDown, Circle } from "lucide-react";
+import { Menu, ChevronDown, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GoDotFill } from "react-icons/go";
 
@@ -11,6 +11,19 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = React.useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [expandedMobileMenu, setExpandedMobileMenu] = React.useState<string | null>(null);
+  const hoverTimeout = React.useRef<any>(null);
+
+  const handleMouseEnter = (title: string) => {
+    clearTimeout(hoverTimeout.current);
+    hoverTimeout.current = setTimeout(() => setOpenMenu(title), 150);
+  };
+
+  const handleMouseLeave = () => {
+    clearTimeout(hoverTimeout.current);
+    hoverTimeout.current = setTimeout(() => setOpenMenu(null), 250);
+  };
+
+  const toggleMobileMenu = () => setMobileOpen(!mobileOpen);
 
   const menuItems = [
     {
@@ -83,37 +96,61 @@ export default function Navbar() {
   ];
 
   return (
-<nav className="fluid-container border-b border-bggray relative z-50">
-   <div className="flex items-center justify-between px-6 py-5 md:px-8">
-        {/* --- Desktop Logo (hidden below lg) --- */}
+    <nav className="w-full border-b border-bggray relative z-50 font-inter">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between px-6 py-3 md:px-8 transition-all duration-300">
+
+        
+        {/* --- Logo + Toggle --- */}
+        <div className="flex w-full items-center justify-between lg:hidden">
+          <Image
+            src="/assets/images/svgfiles/logo-6.svg"
+            alt="logo"
+            width={110}
+            height={80}
+            className="h-auto w-auto"
+          />
+          <button
+            onClick={toggleMobileMenu}
+            aria-label="Toggle Menu"
+            className="flex items-center"
+          >
+            <Menu className="h-7 w-7 text-dark" />
+          </button>
+        </div>
+
+        {/* --- Desktop Logo --- */}
         <Image
           src="/assets/images/svgfiles/logo-6.svg"
           alt="logo"
           width={140}
           height={90}
-          className="hidden lg:block"
+            className="hidden lg:block h-auto w-auto lg:self-start [@media(min-width:1024px)and(max-width:1429px)]:mb-0"
+
         />
 
         {/* --- Desktop Menu --- */}
-        <ul className="hidden lg:flex items-center gap-6 xl:gap-10 relative">
+        <ul className="hidden lg:flex items-center justify-end flex-wrap relative
+                lg:gap-4 xl:gap-6 2xl:gap-7 
+                [@media(min-width:1024px)and(max-width:1429px)]:gap-2
+                [@media(min-width:1024px)and(max-width:1429px)]:flex-rap
+                [@media(min-width:1024px)and(max-width:1429px)]:justify-between
+                [@media(min-width:1024px)and(max-width:1429px)]:w-full
+              ">
           <li>
-            <Link
-              href="/"
-              className="font-semibold text-dark hover:text-navygreen transition"
-            >
+            <Link href="/" className="font-semibold text-dark hover:text-navygreen transition">
               Home
             </Link>
           </li>
 
-          {menuItems.map((menu) => (
+          {menuItems.map((menu, idx) => (
             <li
               key={menu.title}
               className="relative group"
-              onMouseEnter={() => setOpenMenu(menu.title)}
-              onMouseLeave={() => setOpenMenu(null)}
+              onMouseEnter={() => handleMouseEnter(menu.title)}
+              onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center gap-1 font-semibold text-dark hover:text-navygreen transition ${
+                className={`flex items-center gap-[4px] font-semibold text-dark hover:text-navygreen transition ${
                   openMenu === menu.title ? "text-navygreen" : ""
                 }`}
               >
@@ -125,40 +162,35 @@ export default function Navbar() {
                 />
               </button>
 
-              {/* --- Dropdown --- */}
+              {/* Dropdown */}
               {openMenu === menu.title && (
                 <div
-                  className={`
-                    absolute left-0 top-[calc(100%+33px)] z-50
-                    bg-navbarbg shadow-xl border border-gray-200
-                    transition-all duration-300 ease-in-out
-                    ${menu.singleColumn ? "w-[340px]" : "w-[500px]"}
-                    py-4 before:content-[''] before:absolute before:-top-8 before:left-0 before:w-full before:h-8
-                  `}
+                  className={`absolute ${
+                    idx > menuItems.length - 3 ? "right-0" : "left-0"
+                  } top-[calc(100%+26px)] z-50 bg-navbarbg border border-gray-200 shadow-xl transition-all duration-300 ease-in-out ${
+                    menu.singleColumn ? "w-[420px]" : "w-[580px]"
+                  } py-3`}
                 >
-                  {/* Dropdown Heading */}
-                  <div className="px-6 pb-2 text-left">
-                    <h6 className="text-navygreen font-semibold uppercase tracking-wide text-[13px] leading-[20px]">
+                  <div className="px-5 pb-1 text-left">
+                    <h6 className="text-navygreen font-semibold uppercase text-[12px] leading-[18px]">
                       {menu.title}
                     </h6>
                   </div>
-
-                  {/* Dropdown Items */}
                   <div
                     className={`${
                       menu.singleColumn ? "grid-cols-1" : "grid-cols-2"
-                    } grid gap-[2px] px-6 py-2`}
+                    } grid gap-[4px] px-5 py-2`}
                   >
                     {menu.items.map((item) => (
                       <Link
                         key={item}
                         href="#"
-                        className="group/item flex items-start gap-2 py-[6px] px-2 transition-all duration-200 hover:bg-navygreen text-white"
+                        className="group/item flex items-start gap-2 px-2 rounded-md transition-all hover:bg-navygreen"
                       >
-                        <span className="shrink-0 mt-[6px]">
-                          <GoDotFill className="text-dark text-[8px] group-hover/item:text-white transition-colors duration-200" />
+                        <span className="shrink-0 mt-[7px]">
+                          <GoDotFill className="text-dark text-[7px] group-hover/item:text-white" />
                         </span>
-                        <span className="text-dark text-[14px] font-inter leading-[20px] group-hover/item:text-white transition-colors duration-200">
+                        <span className="text-dark text-[15px] font-medium leading-[20px] group-hover/item:text-white flex-1">
                           {item}
                         </span>
                       </Link>
@@ -169,111 +201,65 @@ export default function Navbar() {
             </li>
           ))}
 
-          {/* Appointment Button */}
           <Button
             variant="outline"
-            className="border-navygreen text-navygreen hover:bg-navygreen hover:text-white font-semibold duration-300 px-8 py-6"
+            className="border-navygreen text-navygreen hover:bg-navygreen hover:text-white font-semibold duration-300 px-6 py-6"
           >
-            Appointment
+            APPOINTMENT
           </Button>
         </ul>
 
-        {/* --- Mobile/Tablet Layout --- */}
-        <div className="flex items-center justify-between w-full lg:hidden py-5 px-4">
-          {/* Toggle Button (Left) */}
-          <button
-            className="flex items-center"
-            onClick={() => setMobileOpen(true)}
-            aria-label="Open Menu"
-          >
-            <Menu className="h-7 w-7 text-dark" />
-          </button>
-
-          {/* Logo (Right) */}
-          <Image
-            src="/assets/images/svgfiles/logo-6.svg"
-            alt="logo"
-            width={110}
-            height={80}
-          />
-        </div>
-
-        {/* --- Mobile Drawer (Opens from Left) --- */}
-        <div
-          className={`fixed inset-0 z-40 transition-all duration-300 ${
-            mobileOpen ? "bg-black/50 visible opacity-100" : "invisible opacity-0"
-          }`}
-          onClick={() => setMobileOpen(false)}
-        >
+        {/* --- Mobile / Tablet Centered Menu --- */}
+        {mobileOpen && (
           <div
-            className={`absolute left-0 top-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ${
-              mobileOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
-            onClick={(e) => e.stopPropagation()}
+            className="absolute top-full left-1/2 -translate-x-1/2 w-full sm:w-full md:w-[70%] bg-white border border-gray-200  shadow-lg p-5 z-50"
           >
-            {/* Drawer Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-200">
-              <h3 className="text-lg font-semibold text-navygreen">Menu</h3>
-              <button
-                onClick={() => setMobileOpen(false)}
-                aria-label="Close Menu"
-                className="p-2 rounded-md hover:bg-gray-100 transition"
-              >
-                <X className="h-6 w-6 text-gray-700" />
-              </button>
-            </div>
-
-            {/* Drawer Scrollable Content */}
-            <div className="overflow-y-auto h-[calc(100%-80px)] px-6 py-5 space-y-5">
-              <ul className="space-y-4">
-                {menuItems.map((menu) => (
-                  <li key={menu.title} className="border-b border-bggray pb-2">
-                    <button
-                      className="w-full flex justify-between items-center text-left font-medium text-dark hover:text-navygreen"
-                      onClick={() =>
-                        setExpandedMobileMenu(
-                          expandedMobileMenu === menu.title ? null : menu.title
-                        )
-                      }
-                    >
-                      {menu.title}
-                      <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          expandedMobileMenu === menu.title ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-
-                    {/* Expanded submenu */}
-                    {expandedMobileMenu === menu.title && (
-                      <div className="mt-3 pl-3 border-l border-bggray space-y-2">
-                        {menu.items.map((item) => (
-                          <Link
-                            key={item}
-                            href="#"
-                            className="flex items-center gap-2 py-1.5 text-sm text-gray-6 hover:text-navygreen"
-                          >
-                            <Circle className="h-[6px] w-[6px] text-dark" />
-                            {item}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </li>
-                ))}
-
-                <li className="pt-3">
-                  <Button
-                    variant="outline"
-                    className="w-full border-navyorange text-navygreen hover:bg-navygreen hover:text-white font-semibold transition-all duration-300 px-6 py-4"
+            <ul className="space-y-4">
+              {menuItems.map((menu) => (
+                <li key={menu.title} className="border-b border-bggray pb-2">
+                  <button
+                    className="w-full flex justify-between items-center text-left font-semibold text-dark hover:text-navygreen"
+                    onClick={() =>
+                      setExpandedMobileMenu(
+                        expandedMobileMenu === menu.title ? null : menu.title
+                      )
+                    }
                   >
-                    Appointment
-                  </Button>
+                    {menu.title}
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform ${
+                        expandedMobileMenu === menu.title ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {expandedMobileMenu === menu.title && (
+                    <div className="mt-3 pl-3 border-l border-bggray space-y-2">
+                      {menu.items.map((item) => (
+                        <Link
+                          key={item}
+                          href="/"
+                          className="flex items-center gap-2 py-[4px] text-[13px] text-dark hover:text-navygreen"
+                        >
+                          <Circle className="h-[5px] w-[5px] text-dark" />
+                          {item}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </li>
-              </ul>
-            </div>
+              ))}
+              <li className="pt-3">
+                <Button
+                  variant="outline"
+                  className="w-full border-navygreen text-navygreen hover:bg-navygreen hover:text-white font-semibold transition-all duration-300 px-6 py-4"
+                >
+                  Appointment
+                </Button>
+              </li>
+            </ul>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );
