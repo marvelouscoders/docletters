@@ -23,6 +23,29 @@
     @apply bg-white shadow-md rounded-xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left p-6 hover:shadow-xl transition-all duration-300 min-h-[120px];
   }
 
+  .button-green{
+    @apply  border-navygreen text-navygreen hover:bg-navygreen hover:text-white
+  }
+
+  .mobile-circle{
+    @apply h-[5px] w-[5px] text-dark
+  }
+
+  .mobile-desktop-view{
+    @apply absolute top-full left-1/2 -translate-x-1/2 w-full sm:w-[90%] md:w-[70%] bg-white border border-gray-200 shadow-lg p-5 z-50
+  }
+
+  .menu-items-font-weights{
+    @apply text-dark text-[15px] font-medium leading-[22px] group-hover/item:text-white flex-1
+  }
+  .circle-li{
+    @apply text-dark text-[8px] group-hover/item:text-white
+  }
+
+  .drowpdown-heading{
+    @apply text-navygreen font-semibold uppercase text-[12px] leading-[18px]
+  }
+
 
 
 p{

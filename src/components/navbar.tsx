@@ -3,7 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, ChevronDown, Circle } from "lucide-react";
+import { Menu, X, ChevronDown, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GoDotFill } from "react-icons/go";
 
@@ -97,11 +97,10 @@ export default function Navbar() {
 
   return (
     <nav className="w-full border-b border-bggray relative z-50 font-inter">
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between px-6 py-3 md:px-8 transition-all duration-300">
+      <div className="flex flex-col xl:flex-row xl:items-center justify-between px-6 py-3 md:px-8 transition-all duration-300">
 
-        
-        {/* --- Logo + Toggle --- */}
-        <div className="flex w-full items-center justify-between lg:hidden">
+        {/* --- Logo + Toggle (Mobile + Small Desktop) --- */}
+        <div className="flex w-full items-center justify-between xl:hidden">
           <Image
             src="/assets/images/svgfiles/logo-6.svg"
             alt="logo"
@@ -114,28 +113,25 @@ export default function Navbar() {
             aria-label="Toggle Menu"
             className="flex items-center"
           >
-            <Menu className="h-7 w-7 text-dark" />
+            {mobileOpen ? (
+              <X className="h-7 w-7 text-dark" />
+            ) : (
+              <Menu className="h-7 w-7 text-dark" />
+            )}
           </button>
         </div>
 
-        {/* --- Desktop Logo --- */}
+        {/* --- Desktop Logo (Only ≥1415px) --- */}
         <Image
           src="/assets/images/svgfiles/logo-6.svg"
           alt="logo"
           width={140}
           height={90}
-            className="hidden lg:block h-auto w-auto lg:self-start [@media(min-width:1024px)and(max-width:1429px)]:mb-0"
-
+          className="hidden xl:block h-auto w-auto xl:self-start"
         />
 
-        {/* --- Desktop Menu --- */}
-        <ul className="hidden lg:flex items-center justify-end flex-wrap relative
-                lg:gap-4 xl:gap-6 2xl:gap-7 
-                [@media(min-width:1024px)and(max-width:1429px)]:gap-2
-                [@media(min-width:1024px)and(max-width:1429px)]:flex-rap
-                [@media(min-width:1024px)and(max-width:1429px)]:justify-between
-                [@media(min-width:1024px)and(max-width:1429px)]:w-full
-              ">
+        {/* --- Desktop Menu (Only ≥1415px) --- */}
+        <ul className="hidden xl:flex items-center justify-end flex-wrap relative xl:gap-4 2xl:gap-6">
           <li>
             <Link href="/" className="font-semibold text-dark hover:text-navygreen transition">
               Home
@@ -168,29 +164,31 @@ export default function Navbar() {
                   className={`absolute ${
                     idx > menuItems.length - 3 ? "right-0" : "left-0"
                   } top-[calc(100%+26px)] z-50 bg-navbarbg border border-gray-200 shadow-xl transition-all duration-300 ease-in-out ${
-                    menu.singleColumn ? "w-[420px]" : "w-[580px]"
-                  } py-3`}
+                    menu.singleColumn ? "w-[430px]" : "w-[580px]"
+                  } py-4`}
                 >
-                  <div className="px-5 pb-1 text-left">
+                  <div className="px-5 pb-2 text-left border-b border-gray-100">
                     <h6 className="text-navygreen font-semibold uppercase text-[12px] leading-[18px]">
                       {menu.title}
                     </h6>
                   </div>
-                  <div
-                    className={`${
-                      menu.singleColumn ? "grid-cols-1" : "grid-cols-2"
-                    } grid gap-[4px] px-5 py-2`}
-                  >
+
+                 <div
+  className={`${
+    menu.singleColumn ? "grid-cols-1" : "grid-cols-2"
+  } grid gap-y-2 gap-x-3 px-4 py-2`}
+>
+
                     {menu.items.map((item) => (
                       <Link
                         key={item}
                         href="#"
-                        className="group/item flex items-start gap-2 px-2 rounded-md transition-all hover:bg-navygreen"
+                        className="group/item flex items-start gap-2 px-3 py-[6px] transition-all hover:bg-navygreen"
                       >
-                        <span className="shrink-0 mt-[7px]">
-                          <GoDotFill className="text-dark text-[7px] group-hover/item:text-white" />
+                        <span className="shrink-0 mt-[6px]">
+                          <GoDotFill className="circle-li" />
                         </span>
-                        <span className="text-dark text-[15px] font-medium leading-[20px] group-hover/item:text-white flex-1">
+                        <span className="menu-items-font-weights">
                           {item}
                         </span>
                       </Link>
@@ -203,17 +201,15 @@ export default function Navbar() {
 
           <Button
             variant="outline"
-            className="border-navygreen text-navygreen hover:bg-navygreen hover:text-white font-semibold duration-300 px-6 py-6"
+            className="button-green font-semibold duration-300 px-6 py-6"
           >
             APPOINTMENT
           </Button>
         </ul>
 
-        {/* --- Mobile / Tablet Centered Menu --- */}
+        {/* --- Mobile + Small Desktop Menu (up to <1415px) --- */}
         {mobileOpen && (
-          <div
-            className="absolute top-full left-1/2 -translate-x-1/2 w-full sm:w-full md:w-[70%] bg-white border border-gray-200  shadow-lg p-5 z-50"
-          >
+          <div className="mobile-desktop-view">
             <ul className="space-y-4">
               {menuItems.map((menu) => (
                 <li key={menu.title} className="border-b border-bggray pb-2">
@@ -241,7 +237,7 @@ export default function Navbar() {
                           href="/"
                           className="flex items-center gap-2 py-[4px] text-[13px] text-dark hover:text-navygreen"
                         >
-                          <Circle className="h-[5px] w-[5px] text-dark" />
+                          <Circle className="mobile-circle " />
                           {item}
                         </Link>
                       ))}
@@ -252,7 +248,7 @@ export default function Navbar() {
               <li className="pt-3">
                 <Button
                   variant="outline"
-                  className="w-full border-navygreen text-navygreen hover:bg-navygreen hover:text-white font-semibold transition-all duration-300 px-6 py-4"
+                  className="fluid-container button-green font-semibold transition-all duration-300 px-6 py-4"
                 >
                   Appointment
                 </Button>
