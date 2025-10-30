@@ -6,10 +6,10 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 const OurServices = () => {
   return (
     <section className="max-w-7xl mx-auto bg-white py-12 lg:py-16 px-4 lg:px-0">
-      <div className="flex flex-col lg:flex-row w-full items-center relative gap-12 lg:gap-16">
+      <div className="flex flex-col lg:flex-row w-full items-start gap-8 lg:gap-16 relative">
 
         {/* Left Side Image */}
-        <div className="w-full lg:w-1/2 relative h-[450px] lg:h-[500px]">
+        <div className="relative w-full lg:w-5/12 h-[400px] lg:h-[500px] flex-shrink-0">
           <Image
             src="/assets/images/home-5.jpg"
             alt="Doctor"
@@ -18,15 +18,15 @@ const OurServices = () => {
           />
 
           {/* Overlay Box */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-           bg-navygreen px-6 py-6 rounded text-white shadow-lg text-center w-[220px] lg:w-[260px]">
+          <div className="absolute top-1/2 right-0 transform translate-x-1/4 -translate-y-1/2
+              bg-navygreen px-6 py-6 rounded text-white shadow-lg text-center w-[180px] lg:w-[220px]">
             <h2 className="text-2xl font-bold">58</h2>
             <h3 className="text-sm lg:text-base mt-1">Best doctors in the field</h3>
           </div>
         </div>
 
         {/* Right Side Text */}
-        <div className="w-full lg:w-1/2 bg-navbarbg flex flex-col justify-center px-8 lg:px-16 h-[450px] lg:h-[500px]">
+        <div className="w-full lg:w-7/12 bg-navbarbg flex flex-col justify-center px-6 lg:px-16 h-[400px] lg:h-[500px]">
           <h4 className="text-sm lg:text-base text-gray-600">Our Services</h4>
           <h1 className="mt-2 text-2xl lg:text-3xl font-semibold leading-snug">
             We can help you with the following conditions:
@@ -53,6 +53,7 @@ const OurServices = () => {
             </button>
           </div>
         </div>
+
       </div>
     </section>
   );

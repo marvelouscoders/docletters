@@ -26,7 +26,8 @@ const TopHeader = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-wrap items-center gap-4 md:gap-6 text-sm font-inter text-gray w-full md:w-auto justify-start md:justify-end mt-2 md:mt-0">
+       <div className="flex flex-wrap items-center gap-4 md:gap-6 text-sm font-inter text-gray w-full md:w-auto justify-end mt-2 md:mt-0">
+
 
           <span className="flex items-center gap-2 cursor-pointer transition">
             <FaUser className="text-dark text-base md:text-sm" />
