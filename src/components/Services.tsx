@@ -49,8 +49,8 @@ const Service = () => {
   return (
     <section className="fluid-container py-16 px-6 mt-2">
       <div className="text-center mb-12">
-        <h3>Our Services</h3>
-        <h1>Our Popular Certificates</h1>
+        <h3 className="heading-small">Our Services</h3>
+        <h2>Our Popular Certificates</h2>
       </div>
 
       <div className="theme-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -61,7 +61,6 @@ const Service = () => {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            {/* ✅ Image */}
             <div className="w-full h-35 sm:h-56 overflow-hidden relative">
               <Image
                 src={item.image}
@@ -83,7 +82,7 @@ const Service = () => {
               }`}
             >
               <div className="px-2">
-                <h2>{item.title}</h2>
+                <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
 
@@ -91,9 +90,9 @@ const Service = () => {
               
               <div className="mt-4 px-2 mb-4">
                 <Link href="/">
-                <button className="text-navygreen flex items-center gap-2 font-semibold font-inter hover:">
+                <button className="btn-link">
                   BUY NOW
-                  <ChevronRight className="text-white bg-navygreen rounded-full" />
+                  <ChevronRight className="chevron-right" />
                 </button>
                 </Link>
               </div>

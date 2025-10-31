@@ -28,13 +28,10 @@ const Findout = () => {
           </div>
 
         </div>
-
-        {/* Right Text */}
-     {/* Right Text */}
         <div className="w-full flex-1 flex flex-col justify-between px-6 sm:px-8 lg:px-28 h-[500px] lg:h-[600px] bg-navbarbg pt-12 pb-16">
 
 
-          <h3 >WHY CHOOSE US ?</h3>
+          <h3 className="heading-small" >WHY CHOOSE US ?</h3>
           <h2>
             Perfect for Work, Study & Travel!
           </h2>
@@ -60,9 +57,9 @@ const Findout = () => {
           </ul>
          <div className="mt-4">
             <Link href="/">
-            <button className="text-navygreen flex items-center gap-2 font-semibold font-inter pl-0 pr-4 py-2 sm:py-3 text-sm sm:text-base">
+            <button className="btn-link">
               GET MEDICAL CERTIFICATE NOW
-              <ChevronRight className="text-navygreen bg-white rounded-full p-1 shrink-0" />
+              <ChevronRight className="chevron-right" />
             </button>
             </Link>
           </div>

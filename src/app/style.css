@@ -6,12 +6,26 @@ h1 {
 }
 
 h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-semibold font-lora mb-2 mt-2;
+    @apply text-2xl md:text-3xl lg:text-[2.75rem] font-semibold font-lora mb-4 mt-2;
 }
 
 h3 {
-  @apply text-gray text-base sm:text-lg md:text-xl font-semibold mb-4;
+  @apply text-xl sm:text-2xl md:text-[1.7rem] font-semibold mb-4;
 }
+
+h3.heading-small {
+  @apply text-xl font-semibold text-gray;
+}
+
+h3.card-small-heading{
+  @apply mt-4 text-xl font-semibold text-dark
+}
+
+h3.banner-heading{
+  @apply text-2xl font-semibold text-white
+}
+
+
 h4{
   @apply text-sm sm:text-xl md:text-2xl lg:text-3xl font-semibold font-lora mb-6 text-gray
 }
@@ -117,6 +131,8 @@ p.text-white {
 
 
 
+
+
 @layer components {
 
   .topheader-container{
@@ -139,5 +155,37 @@ p.text-white {
   @apply hidden sm:flex absolute top-1/2 right-0 transform translate-x-1/4 -translate-y-1/2
          bg-navygreen px-6 py-6 rounded text-white shadow-lg w-[180px] lg:w-[220px] flex flex-col items-start;
 }
+
+.icons-size{
+  @apply text-dark text-xl md:text-xl  
+} 
+
+.topheader-text{
+  @apply text-[15px] md:text-sm text-gray
+}
+
+.small-heading{
+  @apply gap-2 text-white text-sm
+}
+
+.btn-link {
+  @apply mt-4 flex items-center gap-2 justify-center md:justify-start font-semibold hover:underline text-navygreen text-xl
+}
+.chevron-right{
+  @apply text-white bg-navygreen rounded-full p-1 shrink-0
+}
+
+.btn-straight{
+  @apply text-navygreen font-medium border border-navygreen px-5 py-2 hover:bg-navygreen hover:text-white transition-all duration-300
+}
+
+.banner-social{
+  @apply hover:text-gray-200
+}
+
+.banner-li{
+  @apply space-y-3 text-white text-sm
+}
+
 
 }

@@ -8,6 +8,7 @@ import OurDoctors from '@/components/OurDoctors'
 import LatestNews from '@/components/LatestNews'
 import Columns from '@/components/Columns'
 import Footer from '@/components/Footer'
+import InfoBar from '@/components/InfoBar'
 
 const Home = () => {
     return (
@@ -17,6 +18,8 @@ const Home = () => {
           <Navbar/>
 
           <Banner/>
+
+          <InfoBar/>
 
           <Service/>
 

@@ -54,16 +54,16 @@ const DoctorsSection = () => {
 
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-8">
           <div>
-            <h3 className="text-navygreen text-sm font-semibold mb-3 tracking-wide">
+            <h3 className="heading-small">
               MEET OUR DOCTORS
             </h3>
-            <h1 className="text-3xl font-bold text-gray-900">
+            <h2>
               Dedicated & Experienced Team
-            </h1>
+            </h2>
           </div>
 
           <Link href="/">
-            <button className="text-navygreen font-medium border border-navygreen px-5 py-2 hover:bg-navygreen hover:text-white transition-all duration-300">
+            <button className="btn-straight">
               View All Doctors
             </button>
           </Link>
@@ -89,10 +89,10 @@ const DoctorsSection = () => {
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
-                  <h3 className="mt-4 text-xl font-semibold text-gray-900">
+                  <h3 className="card-small-heading">
                     {doc.name}
                   </h3>
-                  <p className="text-gray-600 text-base">{doc.profession}</p>
+                  <p>{doc.profession}</p>
                 </div>
               </CarouselItem>
             ))}

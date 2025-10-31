@@ -62,11 +62,11 @@ const Testimonials = () => {
                 <div className="flex flex-col justify-between h-full">
                   <div>
                     <FaQuoteLeft className="text-navygreen text-2xl mb-4" />
-                    <p className="text-gray-700">{t.text}</p>
+                    <p>{t.text}</p>
                   </div>
                   <div className="border-l-2 border-navygreen pl-3 mt-6">
-                    <p className="font-semibold text-dark">{t.name}</p>
-                    <p className="text-gray text-sm">{t.role}</p>
+                    <h3 className="card-small-heading">{t.name}</h3>
+                    <p >{t.role}</p>
                   </div>
                 </div>
               </CarouselItem>
