@@ -60,10 +60,10 @@ const Findout = () => {
           </ul>
          <div className="mt-4">
             <Link href="/">
-              <button className="text-navygreen flex items-center gap-2 font-semibold font-inter px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base">
-                GET MEDICAL CERTIFICATE NOW
-                <ChevronRight className="text-white bg-navygreen rounded-full p-1 shrink-0" />
-              </button>
+            <button className="text-navygreen flex items-center gap-2 font-semibold font-inter pl-0 pr-4 py-2 sm:py-3 text-sm sm:text-base">
+              GET MEDICAL CERTIFICATE NOW
+              <ChevronRight className="text-navygreen bg-white rounded-full p-1 shrink-0" />
+            </button>
             </Link>
           </div>
         </div>
