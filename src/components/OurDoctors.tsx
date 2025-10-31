@@ -43,14 +43,14 @@ const doctors = [
 const DoctorsSection = () => {
   const plugin = React.useRef(
     Autoplay({
-      delay: 3000,
+      delay: 4000,
       stopOnInteraction: false,
     })
   );
 
   return (
-    <section className="w-full bg-white py-16 relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="fluid-container bg-white py-16 relative">
+      <div className="theme-container px-6">
 
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-8">
           <div>
@@ -97,8 +97,6 @@ const DoctorsSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-            <CarouselPrevious className="absolute left-6 sm:-left-10 top-1/2 -translate-y-1/2 bg-white shadow-md hover:bg-navygreen hover:text-white transition-all rounded-full p-2" />
-            <CarouselNext className="absolute right-6 sm:-right-8 top-1/2 -translate-y-1/2 bg-white shadow-md hover:bg-navygreen hover:text-white transition-all rounded-full p-2" />
         </Carousel>
       </div>
     </section>

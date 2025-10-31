@@ -37,7 +37,7 @@ const Testimonials = () => {
 
   const plugin = React.useRef(
     Autoplay({
-      delay: 1500,
+      delay: 2800,
       stopOnInteraction: false,
     })
   );
@@ -72,8 +72,7 @@ const Testimonials = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-            <CarouselPrevious className="absolute left-2 sm:-left-10 top-1/2 -translate-y-1/2 bg-white shadow-md hover:bg-navygreen hover:text-white transition-all rounded-full p-2" />
-            <CarouselNext className="absolute right-2 sm:-right-8 top-1/2 -translate-y-1/2 bg-white shadow-md hover:bg-navygreen hover:text-white transition-all rounded-full p-2" />
+    
 
         </Carousel>
       </div>
