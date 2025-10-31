@@ -89,11 +89,9 @@ const Service = () => {
               {/* Button */}
               
               <div className="mt-4 px-2 mb-4">
-                <Link href="/">
-                <button className="btn-link">
+                <Link href="/" className="btn-link">
                   BUY NOW
                   <ChevronRight className="chevron-right" />
-                </button>
                 </Link>
               </div>
             </div>

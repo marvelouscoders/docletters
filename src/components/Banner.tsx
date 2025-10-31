@@ -28,11 +28,9 @@ const Banner = () => {
           <p>
             Get a medical certificate from a private NHS doctor today without the hassle of waiting for a GP appointment.
           </p>
-          <Link href="/">
-          <button className="btn-link">
+          <Link href="/" className="btn-link">
             Get Started 
             <ChevronRight className="chevron-right" />
-          </button>
           </Link>
         </div>
       </div>

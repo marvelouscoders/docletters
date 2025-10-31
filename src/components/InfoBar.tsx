@@ -1,7 +1,8 @@
 "use client";
 
-import { CiMobile3 } from "react-icons/ci";
+import { CiMobile3, CiStopwatch } from "react-icons/ci";
 import { FaUserDoctor } from "react-icons/fa6";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 const InfoBar = () => {
   return (
@@ -25,7 +26,7 @@ const InfoBar = () => {
         <div className="h-6 w-px bg-white/50"></div>
 
         <div className="flex items-center small-heading">
-          <FaUserDoctor className="text-white text-sm" />
+          <VscWorkspaceTrusted  className="text-white text-base" />
           Trusted by thousands of patients
         </div>
 
@@ -33,7 +34,7 @@ const InfoBar = () => {
         <div className="h-6 w-px bg-white/50"></div>
 
         <div className="flex items-center small-heading ">
-          <CiMobile3 className="text-white text-base" />
+          <CiStopwatch  className="text-white text-base" />
           Available 7 days a week
         </div>
       </div>

@@ -5,7 +5,7 @@ import {  FaShoppingCart } from "react-icons/fa";
 const TopHeader = () => {
   return (
     <div className="topheader-container relative">
-      <div className="fluid-container bg-navygreen text-white text-center py-2 md:py-2 text-sm pt-5 pb-5">
+      <div className="fluid-container bg-navygreen text-white text-center py-4 md:py-2 text-sm pt-5 pb-5">
         Get 10% off with the code: <span className="font-bold">Winter25</span>
       </div>
 

@@ -18,12 +18,10 @@ const HeroSection = () => {
             coverage, please consult our FAQs.
           </p>
 
-          <div className="mt-6">
-            <Link href="/">
-            <button className="btn-link text-white">
+          <div className="mt-6" >
+            <Link href="/" className="btn-link text-white">
               GET MEDICAL CERTIFICATE NOW
               <ChevronRight className="chevron-right bg-white text-navygreen" />
-            </button>
             </Link>
           </div>
         </div>

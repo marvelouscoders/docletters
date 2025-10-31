@@ -2,7 +2,6 @@ import Banner from '@/components/Banner'
 import Navbar from '@/components/navbar'
 import Service from '@/components/Services'
 import TopHeader from '@/components/TopHeader'
-import FindUs from '@/components/FindUs'
 import Medical from '@/components/Medical'
 import OurDoctors from '@/components/OurDoctors'
 import LatestNews from '@/components/LatestNews'
@@ -22,8 +21,6 @@ const Home = () => {
           <InfoBar/>
 
           <Service/>
-
-          <FindUs/>
 
           <Medical/>
 
