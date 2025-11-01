@@ -57,15 +57,15 @@ const Testimonials = () => {
             {testimonials.map((t, i) => (
               <CarouselItem
                 key={i}
-                className="md:basis-1/2 lg:basis-1/3 px-0 md:px-6 lg:px-8"
+                className="testimonials-card"
               >
                 <div className="flex flex-col justify-between h-full">
                   <div>
-                    <FaQuoteLeft className="text-navygreen text-2xl mb-4" />
+                    <FaQuoteLeft />
                     <p>{t.text}</p>
                   </div>
-                  <div className="border-l-2 border-navygreen pl-3 mt-6">
-                    <h3 className="card-small-heading">{t.name}</h3>
+                  <div className="box-border-left">
+                    <h3>{t.name}</h3>
                     <p >{t.role}</p>
                   </div>
                 </div>
