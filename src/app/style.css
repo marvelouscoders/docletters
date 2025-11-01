@@ -2,7 +2,7 @@
 
 
 h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-semibold font-lora mb-4;
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold font-lora mb-4 leading-tight md:leading-tight;
 }
 
 h2 {

@@ -9,9 +9,9 @@ const HeroSection = () => {
     <section className="w-full flex flex-col lg:flex-row pb-12">
       <div className="flex-1 bg-navygreen text-white flex flex-col justify-center py-10 sm:py-14 lg:py-16">
         <div className="theme-container px-6 sm:px-10 lg:px-30">
-          <h1 >
+          <h2>
             The fastest and most convenient way to get a medical letter
-          </h1>
+          </h2>
           <p className="text-white">
             AFC Urgent Care Waltham offers COVID-19 Rapid Virus and Antibody
             Testing. If you have any questions about testing, insurance
