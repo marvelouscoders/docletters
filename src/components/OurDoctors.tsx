@@ -88,7 +88,7 @@ const DoctorsSection = () => {
                       height={300}
                     />
                   </div>
-                  <h3 className="card-small-heading">
+                  <h3>
                     {doc.name}
                   </h3>
                   <p>{doc.profession}</p>
