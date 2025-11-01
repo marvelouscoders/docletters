@@ -8,12 +8,15 @@ import LatestNews from '@/components/LatestNews'
 import Columns from '@/components/Columns'
 import Footer from '@/components/Footer'
 import InfoBar from '@/components/InfoBar'
+import TopCouponCodeBar from '@/components/TopCouponCodeBar'
+import TopAccountBar from '@/components/TopAccountBar'
 
 const Home = () => {
     return (
         <div>
-          <TopHeader/>
-
+          <TopCouponCodeBar />
+          <TopAccountBar />
+          
           <Navbar/>
 
           <Banner/>

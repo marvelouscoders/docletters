@@ -6,6 +6,7 @@ import Link from "next/link";
 
 interface Feature {
   title: string;
+  pricing: string;
   desc: string;
   image: string;
 }
@@ -13,31 +14,37 @@ interface Feature {
 const features: Feature[] = [
   {
     title: "Fit-to-Cruise Medical Certificate",
+    pricing: "£49.00",
     desc: "Visa medical certificate issued within 1–2 hours for Spain and destinations across.",
     image: "/assets/images/card1.png",
   },
   {
     title: "Visa Medical – Certificate of Good Health",
+    pricing: "£39.00",
     desc: "Visa medical certificate issued within 1–2 hours for Spain and destinations across.",
     image: "/assets/images/card2.jpg",
   },
   {
     title: "Pregnancy fit-to-fly certificate",
+    pricing: "£30.00",
     desc: "Visa medical certificate issued within 1–2 hours for Spain and destinations across.",
     image: "/assets/images/card3.png",
   },
   {
     title: "University, college and school sickness letter",
+    pricing: "£58.00",
     desc: "Visa medical certificate issued within 1–2 hours for Spain and destinations across.",
     image: "/assets/images/card4.png",
   },
   {
     title: "Spain – Medical certificate of good health for visa",
+    pricing: "£46.00",
     desc: "Visa medical certificate issued within 1–2 hours for Spain and destinations across.",
     image: "/assets/images/card5.png",
   },
   {
     title: "Disability medical letter",
+    pricing: "£60.00",
     desc: "Visa medical certificate issued within 1–2 hours for Spain and destinations across.",
     image: "/assets/images/card6.png",
   },
@@ -68,13 +75,7 @@ const Service = () => {
                 fill
                 className="w-full h-full object-cover"
               />
-              <div
-                className={`absolute top-0 left-0 bg-dark text-white text-sm px-2 py-1 transition-transform duration-300 ${
-                  hoveredIndex === index ? "translate-x-2" : ""
-                }`}
-              >
-                {hoveredIndex === index ? "£49.00-£79.00" : "£49.00"}
-              </div>
+             
             </div>
             <div
               className={`flex-1 flex flex-col justify-between p-2 rounded transition-colors duration-300 ${
@@ -82,7 +83,8 @@ const Service = () => {
               }`}
             >
               <div className="px-2">
-                <h3>{item.title}</h3>
+                <h3 className="card-big-heading">{item.title}</h3>
+                <h3 className="card-pricing">{item.pricing}</h3>
                 <p>{item.desc}</p>
               </div>
 

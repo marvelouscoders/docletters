@@ -77,7 +77,7 @@ const DoctorsSection = () => {
             {doctors.map((doc, index) => (
               <CarouselItem
                 key={index}
-                className="basis-full sm:basis-1/2 lg:basis-1/4 px-4"
+                className="doctors-card"
               >
                 <div className="text-center">
                   <div className="w-full h-72 overflow-hidden  shadow-md">
@@ -86,7 +86,6 @@ const DoctorsSection = () => {
                       alt={doc.name}
                       width={300}
                       height={300}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
                   <h3 className="card-small-heading">
