@@ -11,6 +11,7 @@ import TopAccountBar from '@/components/TopAccountBar'
 import Newsletter from '@/components/Newsletter'
 import ChooseUs from '@/components/ChooseUs'
 import TopCouponCodeBar from '@/components/TopCouponCodeBar'
+import MedicalSection from '@/components/MedicalSection'
 
 const Home = () => {
     return (
@@ -30,6 +31,8 @@ const Home = () => {
           <ChooseUs/>
 
           <Medical/>
+
+          <MedicalSection/>
 
           <OurDoctors/>
 

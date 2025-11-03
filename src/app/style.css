@@ -301,21 +301,35 @@ p.text-white {
 /* Footer start */
 
 .footer-grid{
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12;
 }
 
 
 
 /* Choose us start */
 
+.normal-container{
+  @apply lg:w-[58%] flex flex-col justify-center px-4 md:px-8 lg:pl-20 lg:pr-8 py-8 md:py-16 bg-navbarbg
+}
+
 .small-box-center{
-  @apply absolute hidden md:flex lg:right-[-60px] right-3 top-1/2 -translate-y-1/2 bg-navygreen text-white px-6 py-6 shadow-lg w-[220px] flex-col items-start justify-center
+  @apply absolute hidden md:flex lg:right-[-60px] right-3 top-1/2 -translate-y-1/2 bg-navygreen text-white px-6 py-6 shadow-lg w-[220px] flex-col items-start justify-center;
 }
 
-.check-circle{
-  @apply text-navygreen w-5 h-5 mt-0.5 mr-2 shrink-0
+.ul-circle {
+  @apply space-y-2 mb-6 text-sm sm:text-base;
+
+  li {
+    @apply flex items-start;
+
+    .check-circle {
+      @apply text-navygreen w-5 h-5 mt-0.5 mr-2 shrink-0;
+    }
+
+    span {
+      @apply font-normal; 
+    }
+  }
+  
 }
 
-.ul-circle{
-  @apply space-y-2 mb-6 text-sm sm:text-base
-}
