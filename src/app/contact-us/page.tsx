@@ -26,7 +26,7 @@ const ContactUs = () => {
                     <h2 className="h2">Send us a message</h2>
                   </div>
 
-                  <div className='grid grid-cols-2 md:grid-cols-1'>
+                  <div className='grid grid-cols-1 md:grid-cols-2'>
                     
                     <div>
                       <form className="">
