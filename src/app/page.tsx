@@ -11,6 +11,7 @@ import TopAccountBar from '@/components/TopAccountBar'
 import Newsletter from '@/components/Newsletter'
 import ChooseUs from '@/components/ChooseUs'
 import TopCouponCodeBar from '@/components/TopCouponCodeBar'
+import WhyChooseUs from '@/components/WhyChooseUs'
 
 const Home = () => {
     return (
@@ -28,6 +29,8 @@ const Home = () => {
           <Service/>
 
           <ChooseUs/>
+
+          <WhyChooseUs />
 
           <Medical/>
 

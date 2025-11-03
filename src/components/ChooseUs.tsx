@@ -32,7 +32,7 @@ export default function ChooseUs() {
           <h3 className="heading-small">
             Why Choose Us?
           </h3>
-          <h2>
+          <h2 >
             Perfect for Work, Study & Travel!
           </h2>
 

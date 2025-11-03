@@ -5,11 +5,22 @@ h1 {
     @apply text-3xl md:text-4xl lg:text-5xl font-semibold font-lora mb-4 leading-tight md:leading-tight;
 }
 
+h1.h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-semibold font-lora mb-4 leading-tight md:leading-tight;
+}
+
 h2 {
     @apply text-2xl md:text-3xl lg:text-[2.75rem] font-semibold font-lora mb-4 mt-2;
 }
+h2.h2 {
+  @apply text-2xl md:text-3xl lg:text-[2.75rem] font-semibold font-lora mb-4 mt-2;
+}
 
 h3 {
+  @apply text-xl sm:text-2xl md:text-[1.7rem] font-semibold font-lora mb-4;
+}
+
+h3.h3 {
   @apply text-xl sm:text-2xl md:text-[1.7rem] font-semibold font-lora mb-4;
 }
 
@@ -308,8 +319,44 @@ p.text-white {
 
 /* Choose us start */
 
+.why-choose-us{
+  @apply grid grid-cols-1 md:grid-cols-2;
+  .why-us-text-div{
+    @apply bg-navbarbg py-10 md:py-14 lg:py-16 pl-16 md:pl-16 pr-4 md:pr-4;
+
+    a{
+      @apply mt-4;
+      svg{
+        @apply bg-navygreen text-white shrink-0 rounded-full;
+      }
+    }
+  }
+}
+
+/* End Choose us start */
+
+ul.circle-bullet-ul{
+  @apply space-y-2 mb-6 mt-6 text-sm sm:text-base;
+
+  li{
+    @apply flex items-start;
+    svg{
+       @apply text-navygreen w-5 h-5 mt-0.5 mr-2 shrink-0;
+    }
+  }
+}
+
 .small-box-center{
-  @apply absolute hidden md:flex lg:right-[-60px] right-3 top-1/2 -translate-y-1/2 bg-navygreen text-white px-6 py-6 shadow-lg w-[220px] flex-col items-start justify-center
+  @apply absolute  md:flex lg:right-[-40px] right-3 top-1/2 -translate-y-1/2 bg-navygreen text-white px-6 py-6 shadow-lg w-[190px] flex-col items-start justify-center;
+  svg{
+   @apply text-white text-4xl mb-3;
+  }
+  span{
+    @apply  text-2xl font-lora;
+  }
+  p{
+    @apply text-white text-sm font-bold mt-0; 
+  }
 }
 
 .check-circle{
