@@ -1,22 +1,21 @@
 import Banner from '@/components/Banner'
 import Navbar from '@/components/navbar'
 import Service from '@/components/Services'
-import TopHeader from '@/components/TopHeader'
 import Medical from '@/components/Medical'
 import OurDoctors from '@/components/OurDoctors'
 import LatestNews from '@/components/LatestNews'
 import Columns from '@/components/Columns'
 import Footer from '@/components/Footer'
 import InfoBar from '@/components/InfoBar'
-import TopCouponCodeBar from '@/components/TopCouponCodeBar'
 import TopAccountBar from '@/components/TopAccountBar'
 import Newsletter from '@/components/Newsletter'
 import ChooseUs from '@/components/ChooseUs'
+import TopCouponCodeBar from '@/components/TopCouponCodeBar'
 
 const Home = () => {
     return (
         <div>
-          <TopCouponCodeBar />
+        <TopCouponCodeBar />
 
           <TopAccountBar />
           
