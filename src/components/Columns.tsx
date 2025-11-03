@@ -66,7 +66,7 @@ const Testimonials = () => {
                     <p>{t.text}</p>
                   </div>
                   <div className="box-border-left">
-                    <h3>{t.name}</h3>
+                    <h3 className="h3">{t.name}</h3>
                     <p >{t.role}</p>
                   </div>
                 </div>
