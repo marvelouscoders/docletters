@@ -3,6 +3,7 @@ import Newsletter from '@/components/Newsletter'
 import PageBanner from '@/components/PageBanner'
 import TopAccountBar from '@/components/TopAccountBar'
 import TopCouponCodeBar from '@/components/TopCouponCodeBar'
+import Navbar from '@/components/navbar'
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { ChevronRight } from 'lucide-react'
@@ -15,22 +16,22 @@ const ContactUs = () => {
     <div>
       <TopCouponCodeBar />
       <TopAccountBar />
+      <Navbar />
       <PageBanner />
       <section>
         <div className="fluid-container bg-navbarbg px-8 py-16">
             <div className="theme-container">
-                <div className='grid grid-cols-1 w-5xl mx-auto'>
+                <div className='w-full md:w-5xl  mx-auto'>
                  
                   <div className="text-center mb-12">
                     <h3 className="heading-small">Contact Us</h3>
                     <h2 className="h2">Send us a message</h2>
                   </div>
-
-                  <div className='grid grid-cols-1 md:grid-cols-2'>
+ 
                     
-                    <div>
+                    <div className='w-full'>
                       <form className="">
-                        <div className="grid grid-cols-1  md:grid-cols-2 gap-6">
+                        <div className="grid w-full grid-cols-1  md:grid-cols-2 gap-6">
                           
                           <div className="grid w-full  items-center gap-2">
                             <Label htmlFor="full-name" className='font-lora font-[500] text-base'>Full Name</Label>
@@ -71,7 +72,7 @@ const ContactUs = () => {
                       </form>
                     </div>
 
-                  </div>
+                
                 </div>
             </div>
         </div>
