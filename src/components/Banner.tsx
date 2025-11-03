@@ -2,10 +2,6 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { CiMobile3 } from "react-icons/ci";
-import { FaCircleChevronRight, FaUserDoctor } from "react-icons/fa6";
-import { MdOutlineChevronRight } from "react-icons/md";
-
 const Banner = () => {
   return (
     <section>
@@ -29,7 +25,7 @@ const Banner = () => {
           <p>
             Get a medical certificate from a private NHS doctor today without the hassle of waiting for a GP appointment.
           </p>
-          <Link href="/" className="btn-link">
+          <Link href="/" className="btn-link items-center justify-center">
             Get Started 
             <ChevronRight className="chevron-right" />
           </Link>
