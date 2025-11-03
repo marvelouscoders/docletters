@@ -9,9 +9,9 @@ import Footer from '@/components/Footer'
 import InfoBar from '@/components/InfoBar'
 import TopAccountBar from '@/components/TopAccountBar'
 import Newsletter from '@/components/Newsletter'
-import ChooseUs from '@/components/ChooseUs'
 import TopCouponCodeBar from '@/components/TopCouponCodeBar'
 import MedicalSection from '@/components/MedicalSection'
+import WhyChooseUs from '@/components/WhyChooseUs'
 
 const Home = () => {
     return (
@@ -27,10 +27,8 @@ const Home = () => {
           <InfoBar/>
 
           <Service/>
-
-          <ChooseUs/>
-
-          <Medical/>
+          
+          <WhyChooseUs />
 
           <MedicalSection/>
 
@@ -43,7 +41,6 @@ const Home = () => {
           <Newsletter/>
 
           <Footer/>
-
 
         </div>
     )

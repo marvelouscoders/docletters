@@ -59,7 +59,7 @@ const Service = () => {
     <div className="fluid-container py-16 px-6 mt-2">
       <div className="text-center mb-12">
         <h3 className="heading-small">Our Services</h3>
-        <h2>Our Popular Certificates</h2>
+        <h2 className="h2">Our Popular Certificates</h2>
       </div>
 
       <div className="theme-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
