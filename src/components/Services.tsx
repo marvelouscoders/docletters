@@ -54,7 +54,9 @@ const Service = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="fluid-container py-16 px-6 mt-2">
+    <section>
+
+    <div className="fluid-container py-16 px-6 mt-2">
       <div className="text-center mb-12">
         <h3 className="heading-small">Our Services</h3>
         <h2>Our Popular Certificates</h2>
@@ -99,6 +101,7 @@ const Service = () => {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

@@ -49,7 +49,9 @@ const DoctorsSection = () => {
   );
 
   return (
-    <section className="fluid-container bg-white py-16 relative">
+
+    <section>
+      <div className="fluid-container bg-white py-16 relative">
       <div className="theme-container px-6">
 
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-8">
@@ -97,6 +99,7 @@ const DoctorsSection = () => {
             ))}
           </CarouselContent>
         </Carousel>
+      </div>
       </div>
     </section>
   );

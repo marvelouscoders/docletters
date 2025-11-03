@@ -6,7 +6,8 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="w-full flex flex-col lg:flex-row pb-12">
+    <section>
+    <div className="w-full flex flex-col lg:flex-row pb-12">
       <div className="flex-1 bg-navygreen text-white flex flex-col justify-center py-10 sm:py-14 lg:py-16">
         <div className="theme-container px-6 sm:px-10 lg:px-30">
           <h2>
@@ -34,6 +35,7 @@ const HeroSection = () => {
           height={800}
           className="w-full h-[280px] sm:h-[400px] lg:h-full object-cover"
         />
+      </div>
       </div>
     </section>
   );

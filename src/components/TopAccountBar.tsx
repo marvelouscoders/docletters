@@ -27,7 +27,7 @@ const TopAccountBar = () => {
                         <CiUser />Account
                     </Link>
 
-                    <Link href="/">
+                    <Link href="cart">
                         <CiShoppingCart /><span>0</span>items
                     </Link>
                    

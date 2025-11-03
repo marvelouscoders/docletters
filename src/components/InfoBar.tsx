@@ -6,7 +6,8 @@ import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 const InfoBar = () => {
   return (
-    <section className="relative bg-navygreen hidden md:block">
+    <section>
+    <div className="relative bg-navygreen hidden md:block">
       <div className="theme-container px-6 flex items-center justify-between h-15">
         {/* Item 1 */}
         <div className="flex items-center small-heading">
@@ -38,6 +39,7 @@ const InfoBar = () => {
           Available 7 days a week
         </div>
       </div>
+    </div>
     </section>
   );
 };

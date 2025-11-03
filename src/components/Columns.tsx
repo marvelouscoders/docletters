@@ -43,7 +43,8 @@ const Testimonials = () => {
   );
 
   return (
-    <section className="fluid-container bg-navbarbg py-16 relative">
+    <section >
+    <div className="fluid-container bg-navbarbg py-16 relative">
       <div className="theme-container px-6">
         <Carousel
           plugins={[plugin.current]}
@@ -75,6 +76,7 @@ const Testimonials = () => {
     
 
         </Carousel>
+      </div>
       </div>
     </section>
   );

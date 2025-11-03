@@ -11,25 +11,10 @@ import { FaTwitter } from "react-icons/fa";
 
 export default function Footers() {
   return (
-    <>
-        <div className="bg-navygreen text-white py-10">
-        <div className="theme-container px-8 flex flex-col sm:flex-row items-center justify-start gap-6 flex-wrap">
-        <h2>
-        Subscribe to our Newsletter
-        </h2>
-        <input
-        type="email"
-        placeholder="Enter your email"
-        className="w-full sm:w-[260px] px-12 py-3 text-white bg-inputbg outline-none text-sm"
-        />
-        <button className="bg-dark text-white px-8 py-3 text-sm font-medium hover:bg-opacity-80 transition-all duration-300 whitespace-nowrap ">
-        Subscribe
-        </button>
-            </div>
-            </div>
+    <section>
       <footer className="bg-dark text-white py-12">
         <div className="theme-container px-6 sm:px-10 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="footer-grid">
             <div>
               <Image
                 src="/assets/images/svgfiles/logo-6.svg"
@@ -127,6 +112,6 @@ export default function Footers() {
           </div>
         </div>
       </footer>
-    </>
+      </section>
   );
 }

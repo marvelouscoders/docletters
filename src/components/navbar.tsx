@@ -96,10 +96,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fluid-conatiner border-b border-bggray relative z-50 font-inter">
+    <section>
+    <nav className="fluid-conatiner navbar-border">
       <div className="flex flex-col xl:flex-row xl:items-center justify-between px-6 py-3 md:px-8 transition-all duration-300">
-
-        {/* --- Logo + Toggle (Mobile + Small Desktop) --- */}
         <div className="flex w-full items-center justify-between xl:hidden">
           <Image
             src="/assets/images/svgfiles/logo-6.svg"
@@ -161,11 +160,9 @@ export default function Navbar() {
               {/* Dropdown */}
               {openMenu === menu.title && (
                 <div
-                  className={`absolute ${
-                    idx > menuItems.length - 3 ? "right-0" : "left-0"
-                  } top-[calc(100%+26px)] z-50 bg-navbarbg border border-gray-200 shadow-xl transition-all duration-300 ease-in-out ${
-                    menu.singleColumn ? "w-[430px]" : "w-[580px]"
-                  } py-4`}
+                  className={`navbar-dropdown ${ 
+                    idx > menuItems.length - 3 ? "right" : "left"
+                  } ${menu.singleColumn ? "narrow" : "wide"}`}
                 >
                   <div className="px-5 pb-2 text-left border-b border-gray-100">
                     <h6 className="text-navygreen font-semibold uppercase text-[12px] leading-[18px]">
@@ -258,5 +255,6 @@ export default function Navbar() {
         )}
       </div>
     </nav>
+    </section>
   );
 }

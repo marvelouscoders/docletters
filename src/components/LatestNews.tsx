@@ -6,7 +6,8 @@ import Link from "next/link";
 
 const NewsSection = () => {
   return (
-    <section className="fluid-container py-16 bg-white">
+    <section>
+      <div className="fluid-container py-16 bg-white">
       <div className="theme-container px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-10">
           <div>
@@ -84,6 +85,7 @@ const NewsSection = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

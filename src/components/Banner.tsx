@@ -8,7 +8,8 @@ import { MdOutlineChevronRight } from "react-icons/md";
 
 const Banner = () => {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section>
+    <div className="relative w-full overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <Image
           src="/assets/images/banner1.jpg"
@@ -34,6 +35,7 @@ const Banner = () => {
           </Link>
         </div>
       </div>
+    </div>
     </section>
   );
 };

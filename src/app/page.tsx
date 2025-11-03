@@ -10,11 +10,14 @@ import Footer from '@/components/Footer'
 import InfoBar from '@/components/InfoBar'
 import TopCouponCodeBar from '@/components/TopCouponCodeBar'
 import TopAccountBar from '@/components/TopAccountBar'
+import Newsletter from '@/components/Newsletter'
+import ChooseUs from '@/components/ChooseUs'
 
 const Home = () => {
     return (
         <div>
           <TopCouponCodeBar />
+
           <TopAccountBar />
           
           <Navbar/>
@@ -25,6 +28,8 @@ const Home = () => {
 
           <Service/>
 
+          <ChooseUs/>
+
           <Medical/>
 
           <OurDoctors/>
@@ -32,6 +37,8 @@ const Home = () => {
           <Columns/>
 
           <LatestNews/>
+
+          <Newsletter/>
 
           <Footer/>
 
