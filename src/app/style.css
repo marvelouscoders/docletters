@@ -49,6 +49,12 @@ h5{
   @apply text-base md:text-lg lg:text-xl font-semibold font-lora mb-3 text-dark
 }
 
+/* Buttons css */
+.btn-outline-big{
+  @apply bg-transparent px-6 py-4 border-2 text-navygreen border-navygreen items-center justify-center hover:text-white hover:bg-navygreen;
+}
+/*End Buttons css*/
+
 
 
 
@@ -437,4 +443,13 @@ ul.circle-bullet-ul{
   }
 
 }
+
+/* Start page banner box  */
+.page-banner-box{
+  @apply flex flex-col md:flex-row items-start px-6 py-16 md:py-16 relative z-10;
+  div{
+    @apply  w-full md:w-[30%] bg-white/90 shadow-xl border-8 border-skyblue px-8 py-8 backdrop-blur-sm text-center md:text-left;
+  }
+}
+/* End page banner box  */
 
