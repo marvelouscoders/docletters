@@ -329,11 +329,6 @@ p.text-white {
 
 /* Choose us start */
 
-
-.normal-container{
-  @apply lg:w-[58%] flex flex-col justify-center px-4 md:px-8 lg:pl-20 lg:pr-8 py-8 md:py-16 bg-navbarbg
-}
-
 .small-box-center{
   @apply absolute hidden md:flex lg:right-[-60px] right-3 top-1/2 -translate-y-1/2 bg-navygreen text-white px-6 py-6 shadow-lg w-[220px] flex-col items-start justify-center;
 }
@@ -453,3 +448,5 @@ ul.circle-bullet-ul{
 }
 /* End page banner box  */
 
+
+/* Start Faqs sections */

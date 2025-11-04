@@ -12,6 +12,7 @@ import Newsletter from '@/components/Newsletter'
 import TopCouponCodeBar from '@/components/TopCouponCodeBar'
 import MedicalSection from '@/components/MedicalSection'
 import WhyChooseUs from '@/components/WhyChooseUs'
+import FAQs from '@/components/Faqsection'
 
 const Home = () => {
     return (
@@ -37,6 +38,8 @@ const Home = () => {
           <Columns/>
 
           <LatestNews/>
+
+          <FAQs/>
 
           <Newsletter/>
 
