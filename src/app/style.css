@@ -5,10 +5,6 @@ h1 {
     @apply text-3xl md:text-4xl lg:text-5xl font-semibold font-lora mb-4 leading-tight md:leading-tight;
 }
 
-h1.h1 {
-  @apply text-3xl md:text-4xl lg:text-5xl font-semibold font-lora mb-4 leading-tight md:leading-tight;
-}
-
 h2 {
     @apply text-2xl md:text-3xl lg:text-[2.75rem] font-semibold font-lora mb-2 mt-2;
 }
@@ -17,10 +13,6 @@ h2.h2 {
 }
 
 h3 {
-  @apply text-xl sm:text-2xl md:text-[1.7rem] font-semibold font-lora mb-4;
-}
-
-h3.h3 {
   @apply text-xl sm:text-2xl md:text-[1.7rem] font-semibold font-lora mb-4;
 }
 
@@ -48,12 +40,6 @@ h4{
 h5{
   @apply text-base md:text-lg lg:text-xl font-semibold font-lora mb-3 text-dark
 }
-
-/* Buttons css */
-.btn-outline-big{
-  @apply bg-transparent px-6 py-4 border-2 text-navygreen border-navygreen items-center justify-center hover:text-white hover:bg-navygreen;
-}
-/*End Buttons css*/
 
 
 
@@ -83,7 +69,7 @@ h5{
 
 /* ====== Dropdown Container (Navbar) ====== */
 .dropdown-container {
-  @apply absolute z-50 bg-navbarbg border border-gray-200 shadow-xl
+  @apply absolute z-50 bg-navbarbg border border-gray-200 shadow-xl 
          transition-all duration-300 ease-in-out py-4;
 }
 
@@ -173,8 +159,8 @@ p.text-white {
 }
 
 .icons-size{
-  @apply text-dark text-xl md:text-xl
-}
+  @apply text-dark text-xl md:text-xl  
+} 
 
 .topheader-text{
   @apply text-[15px] md:text-sm text-gray
@@ -186,10 +172,6 @@ p.text-white {
 
 .btn-link {
   @apply mt-3 flex items-center gap-2 justify-start md:justify-start font-semibold hover:underline text-navygreen text-lg
-}
-
-.btn-link-white {
-  @apply mt-3 flex items-center gap-2 justify-start md:justify-start font-semibold hover:underline text-white text-lg
 }
 .chevron-right{
   @apply text-white bg-navygreen rounded-full p-1 shrink-0
@@ -234,7 +216,7 @@ p.text-white {
       span{
         @apply font-normal;
       }
-
+      
     }
     a:hover{
       @apply cursor-pointer
@@ -251,7 +233,7 @@ p.text-white {
       span{
         @apply font-normal;
       }
-
+      
     }
     a:hover{
       @apply cursor-pointer
@@ -296,7 +278,7 @@ p.text-white {
 }
 
 .navbar-dropdown {
-  @apply absolute top-[calc(100%+26px)] z-50 bg-navbarbg border border-gray-200 shadow-xl
+  @apply absolute top-[calc(100%+26px)] z-50 bg-navbarbg border border-gray-200 shadow-xl 
          transition-all duration-300 ease-in-out py-4;
 }
 
@@ -322,7 +304,7 @@ p.text-white {
 /* Footer start */
 
 .footer-grid{
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12
 }
 
 
@@ -411,7 +393,7 @@ ul.circle-bullet-ul{
       @apply space-y-2 mb-6 mt-6 text-sm sm:text-base;
 
      li{
-     @apply flex items-start sm:items-start;
+     @apply flex items-start sm:items-start space-y-2;
      svg{
        @apply text-navygreen bg-white w-5 h-5 mt-0.5 mr-2 shrink-0 rounded-full;
      }
@@ -494,42 +476,4 @@ ul.circle-bullet-ul{
 .answer {
   @apply px-4 sm:px-6 pb-4 sm:pb-5 pt-2 sm:pt-4 
          text-gray-600 text-sm sm:text-base leading-relaxed;
-}
-
-
-/* End faqs section */
-
-
-/* Start disability Letter */
-
-.disability-letter{
-  @apply grid-cols-1 md:grid-cols-2 gap-0
-}
-.disability-section {
-  @apply max-w-7xl mx-auto bg-white py-10 px-4 sm:px-8 lg:px-16;
-}
-
-.breadcrumb {
-  @apply text-sm text-gray-500 mb-6 flex flex-wrap items-center gap-1;
-}
-
-.breadcrumb span {
-  @apply cursor-pointer hover:text-navygreen;
-}
-
-.breadcrumb span:last-child {
-  @apply text-gray-800 font-semibold;
-}
-
-/* Main Image */
-.disability-image img {
-  @apply w-full h-auto rounded-xl shadow-md object-cover mb-6;
-}
-
-.thumbnail-grid {
-  @apply grid grid-cols-2 sm:grid-cols-4 gap-4;
-}
-
-.thumbnail-grid img {
-  @apply w-full h-32 sm:h-40 object-cover rounded-lg shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 cursor-pointer;
 }
