@@ -22,7 +22,7 @@ export default function FAQs({ title, faqs }: FAQsProps) {
 
   return (
     <section>
-      <div className="fluid-container py-10 sm:py-14 px-4 sm:px-8 md:px-12 lg:px-20">
+      <div className="fluid-container py-8 sm:py-12 px-4 sm:px-6 md:px-12 lg:px-20">
         <div className="theme-container faqs-section">
           <h2 className="h2 mt-0">{title}</h2>
         </div>

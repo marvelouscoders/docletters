@@ -495,3 +495,41 @@ ul.circle-bullet-ul{
   @apply px-4 sm:px-6 pb-4 sm:pb-5 pt-2 sm:pt-4 
          text-gray-600 text-sm sm:text-base leading-relaxed;
 }
+
+
+/* End faqs section */
+
+
+/* Start disability Letter */
+
+.disability-letter{
+  @apply grid-cols-1 md:grid-cols-2 gap-0
+}
+.disability-section {
+  @apply max-w-7xl mx-auto bg-white py-10 px-4 sm:px-8 lg:px-16;
+}
+
+.breadcrumb {
+  @apply text-sm text-gray-500 mb-6 flex flex-wrap items-center gap-1;
+}
+
+.breadcrumb span {
+  @apply cursor-pointer hover:text-navygreen;
+}
+
+.breadcrumb span:last-child {
+  @apply text-gray-800 font-semibold;
+}
+
+/* Main Image */
+.disability-image img {
+  @apply w-full h-auto rounded-xl shadow-md object-cover mb-6;
+}
+
+.thumbnail-grid {
+  @apply grid grid-cols-2 sm:grid-cols-4 gap-4;
+}
+
+.thumbnail-grid img {
+  @apply w-full h-32 sm:h-40 object-cover rounded-lg shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 cursor-pointer;
+}
