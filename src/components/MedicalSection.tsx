@@ -4,11 +4,11 @@ import React from 'react';
 
 import Image from 'next/image';
 const MedicalSection = () => {
-    return (
+    return ( 
         <section>
-        <div className='fluid-container py-16'>
-            <div className='theme-container  medical-scetion'>
-                <div className='medical-text-side'>
+        <div className='fluid-container py-16 relative '>
+            <div className='theme-container medical-scetion'>
+                <div className='medical-text-side '>
                     <h2 className='h2'>The fastest and most convenient way to get a medical letter</h2>
                     <p>AFC Urgent Care Waltham offers COVID-19 Rapid Virus and Antibody Testing. If you have any questions about testing, insurance coverage, please consult our FAQs.</p>
                     <p>Submit everything online, get reviewed by qualified professionals, and receive your certificate without delays.</p>

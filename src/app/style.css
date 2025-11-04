@@ -172,6 +172,10 @@ p.text-white {
 
 .btn-link {
   @apply mt-3 flex items-center gap-2 justify-start md:justify-start font-semibold hover:underline text-navygreen text-lg
+
+}
+.btn-link-white {
+  @apply mt-3 flex items-center gap-2 justify-start md:justify-start font-semibold hover:underline text-white text-lg
 }
 .chevron-right{
   @apply text-white bg-navygreen rounded-full p-1 shrink-0
@@ -367,7 +371,7 @@ ul.circle-bullet-ul{
 /* Medical section start */
 
 .medical-scetion{
-  @apply grid grid-cols-1 md:grid-cols-2;
+  @apply grid grid-cols-1 md:grid-cols-2 max-w-full;
 
 
 
@@ -375,8 +379,9 @@ ul.circle-bullet-ul{
     @apply h-[400px] md:h-auto;
   }
 
-  .medical-text-side{
-  @apply bg-navygreen text-white py-3 md:py-14 lg:py-16 pl-6 md:pl-16 pr-4 md:pr-4;
+.medical-text-side {
+   @apply bg-navygreen text-white py-6 sm:pl-12 md:py-14 lg:py-16 pl-6 md:pl-50 pr-16;
+
 
     a{
       @apply mt-4;
@@ -385,7 +390,7 @@ ul.circle-bullet-ul{
       }
     }
     p{
-      @apply text-white
+      @apply text-white 
     }
 
 
