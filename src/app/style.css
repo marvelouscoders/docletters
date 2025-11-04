@@ -329,11 +329,6 @@ p.text-white {
 
 /* Choose us start */
 
-
-.normal-container{
-  @apply lg:w-[58%] flex flex-col justify-center px-4 md:px-8 lg:pl-20 lg:pr-8 py-8 md:py-16 bg-navbarbg
-}
-
 .small-box-center{
   @apply absolute hidden md:flex lg:right-[-60px] right-3 top-1/2 -translate-y-1/2 bg-navygreen text-white px-6 py-6 shadow-lg w-[220px] flex-col items-start justify-center;
 }
@@ -453,6 +448,7 @@ ul.circle-bullet-ul{
 }
 /* End page banner box  */
 
+/* contact-us start  */
 .form-group {
   @apply w-full flex flex-col space-y-2;
 
@@ -461,7 +457,7 @@ ul.circle-bullet-ul{
   }
 
   .form-control {
-    @apply h-[58px] w-full bg-white px-4 border border-gray-300 rounded-none
+    @apply h-[58px] w-full bg-white px-4 border-0 border-gray-300 rounded-none
     focus:ring-2 focus:ring-navygreen focus:border-navygreen focus:outline-none
     transition duration-200
   }
@@ -471,4 +467,31 @@ ul.circle-bullet-ul{
     focus:ring-2 focus:ring-navygreen focus:border-navygreen focus:outline-none;
   }
 
+}
+
+/* FAQ Section Title */
+.faqs-section {
+  @apply text-center mb-6 sm:mb-10;
+}
+
+.normal-container {
+  @apply max-w-5xl mx-auto space-y-4 sm:space-y-5;
+}
+
+.faq-button {
+  @apply w-full flex justify-between items-center text-left 
+         px-6 sm:px-6 py-3 sm:py-4 font-lora 
+         transition-all duration-300;
+}
+
+.faq-button span {
+  @apply text-sm sm:text-base md:font-semibold font-lora;
+}
+
+.faq-button svg {
+  @apply w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300;
+}
+.answer {
+  @apply px-4 sm:px-6 pb-4 sm:pb-5 pt-2 sm:pt-4 
+         text-gray-600 text-sm sm:text-base leading-relaxed;
 }
