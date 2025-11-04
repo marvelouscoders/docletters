@@ -83,7 +83,7 @@ h5{
 
 /* ====== Dropdown Container (Navbar) ====== */
 .dropdown-container {
-  @apply absolute z-50 bg-navbarbg border border-gray-200 shadow-xl 
+  @apply absolute z-50 bg-navbarbg border border-gray-200 shadow-xl
          transition-all duration-300 ease-in-out py-4;
 }
 
@@ -173,8 +173,8 @@ p.text-white {
 }
 
 .icons-size{
-  @apply text-dark text-xl md:text-xl  
-} 
+  @apply text-dark text-xl md:text-xl
+}
 
 .topheader-text{
   @apply text-[15px] md:text-sm text-gray
@@ -234,7 +234,7 @@ p.text-white {
       span{
         @apply font-normal;
       }
-      
+
     }
     a:hover{
       @apply cursor-pointer
@@ -251,7 +251,7 @@ p.text-white {
       span{
         @apply font-normal;
       }
-      
+
     }
     a:hover{
       @apply cursor-pointer
@@ -296,7 +296,7 @@ p.text-white {
 }
 
 .navbar-dropdown {
-  @apply absolute top-[calc(100%+26px)] z-50 bg-navbarbg border border-gray-200 shadow-xl 
+  @apply absolute top-[calc(100%+26px)] z-50 bg-navbarbg border border-gray-200 shadow-xl
          transition-all duration-300 ease-in-out py-4;
 }
 
@@ -347,7 +347,7 @@ p.text-white {
     @apply h-[400px] md:h-auto;
   }
 
-  
+
   .why-us-text-div{
     @apply bg-navbarbg py-3 md:py-14 lg:py-16 pl-6 md:pl-16 pr-4 md:pr-4;
 
@@ -382,7 +382,7 @@ ul.circle-bullet-ul{
     @apply  text-2xl font-lora;
   }
   p{
-    @apply text-white text-sm font-bold mt-0; 
+    @apply text-white text-sm font-bold mt-0;
   }
 
 }
@@ -438,7 +438,7 @@ ul.circle-bullet-ul{
     }
 
     span {
-      @apply font-normal; 
+      @apply font-normal;
     }
   }
 
@@ -453,3 +453,22 @@ ul.circle-bullet-ul{
 }
 /* End page banner box  */
 
+.form-group {
+  @apply w-full flex flex-col space-y-2;
+
+  label {
+    @apply text-gray-700 font-lora font-[500] text-base;
+  }
+
+  .form-control {
+    @apply h-[58px] w-full bg-white px-4 border border-gray-300 rounded-none
+    focus:ring-2 focus:ring-navygreen focus:border-navygreen focus:outline-none
+    transition duration-200
+  }
+
+  textarea.form-control {
+    @apply w-full bg-white h-32 p-3 border-0 rounded-none resize-y
+    focus:ring-2 focus:ring-navygreen focus:border-navygreen focus:outline-none;
+  }
+
+}
