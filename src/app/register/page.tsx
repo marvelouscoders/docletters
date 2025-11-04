@@ -6,12 +6,21 @@ import { CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
-const Login = () => {
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+  } from "@/components/ui/select"
+
+const Register = () => {
   return (
     <div>
         <TopCouponCodeBar />
         <TopAccountBar />
         <Navbar />
+
         <section>
             <div className="fluid-container px-8">
                 <div className="theme-container py-16">
@@ -59,17 +68,41 @@ const Login = () => {
                         </div>
 
                         <div className='right'>
-                            <h2 className='h2'>New to Clinic Doc</h2>
-                            <p className='bold'>There are many great benefits to registering an account with us.</p>
+                            <h2 className='h2'>Register Now</h2>
+                            <p className='bold'>To register, please provide your details using the form below.</p>
                             
+                            <div className='w-full mt-12'>
+                                <form className="">
+                                   
+                                    <div className="grid grid-cols-1 md:grid-cols-2 w-full  gap-6">
 
-                            <ul className='circle-bullet-ul'>
-                                <li><CheckCircle /> Regular email updates from the Clinic Doc team</li>
-                                <li><CheckCircle />Edit your details</li>
-                                <li><CheckCircle />Manage your health profile</li>
-                                <li><CheckCircle />Faster checkout</li>
-                                <li><CheckCircle />Re order previous treatments</li>
-                            </ul>
+                                        <div className="form-group">
+                                            <label htmlFor="first-name" >First Name</label>
+                                            <input type="text" id="first-name" placeholder="" className='form-control' />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="last-name" >Last Name</label>
+                                            <input type="text" id="last-name" placeholder="" className='form-control' />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="gender" >Gender</label>
+                                            <Select>
+                                                <SelectTrigger className="w-full">
+                                                    <SelectValue placeholder="Theme" />
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectItem value="light">Male</SelectItem>
+                                                    <SelectItem value="dark">Female</SelectItem>
+                                                    <SelectItem value="system">Other</SelectItem>
+                                                </SelectContent>
+                                            </Select>
+                                        </div>
+
+                                    </div>
+                                   
+                                </form>
+                            </div>
+                            
 
                             <div className="mt-6 flex  w-full  items-center justify-center">
                                 <Link href="/" className="btn-outline-big w-full text-center uppercase">
@@ -93,4 +126,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Register

@@ -340,7 +340,7 @@ p.text-white {
 /* End Choose us start */
 
 ul.circle-bullet-ul{
-  @apply space-y-2 mb-6 mt-6 text-sm sm:text-base;
+  @apply space-y-4 mb-6 mt-6 text-sm sm:text-base;
 
   li{
     @apply flex items-start;
@@ -390,10 +390,10 @@ ul.circle-bullet-ul{
 
 
     ul.circle-bullet-ul{
-      @apply space-y-2 mb-6 mt-6 text-sm sm:text-base;
+      @apply space-y-3 mb-6 mt-6 text-sm sm:text-base;
 
      li{
-     @apply flex items-start sm:items-start space-y-2;
+     @apply flex items-start sm:items-start ;
      svg{
        @apply text-navygreen bg-white w-5 h-5 mt-0.5 mr-2 shrink-0 rounded-full;
      }
@@ -405,7 +405,7 @@ ul.circle-bullet-ul{
 }
 
 .ul-circle {
-  @apply space-y-2 mb-6 text-sm sm:text-base;
+  @apply space-y-3 mb-6 text-sm sm:text-base;
 
   li {
     @apply flex items-start;
@@ -523,3 +523,5 @@ ul.circle-bullet-ul{
     }
   }
 }
+
+/* End login box*/
