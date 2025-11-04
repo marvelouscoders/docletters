@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lora, Inter } from "next/font/google";
 import "./globals.css";
 import "./style.css";
+import "./style2.css";
 
 const lora = Lora({
   variable: "--font-lora",
