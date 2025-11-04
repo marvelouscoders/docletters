@@ -453,7 +453,7 @@ ul.circle-bullet-ul{
   @apply w-full flex flex-col space-y-2;
 
   label {
-    @apply text-gray-700 font-lora font-[500] text-base;
+    @apply text-dark font-lora font-[500] text-base;
   }
 
   .form-control {
@@ -495,3 +495,45 @@ ul.circle-bullet-ul{
   @apply px-4 sm:px-6 pb-4 sm:pb-5 pt-2 sm:pt-4 
          text-gray-600 text-sm sm:text-base leading-relaxed;
 }
+
+/*Login box*/
+
+.login-box{
+  @apply grid grid-cols-1 md:grid-cols-2 gap-12;
+  .left{
+    @apply bg-navygreen px-8 py-12;
+    h2{
+      @apply text-white;
+    }
+    p{
+      @apply text-white mt-2;
+
+    }
+    p.bold{
+      @apply text-white font-bold ;
+    }
+    label{
+      @apply text-white;
+    }
+    input{
+      @apply bg-lightgreen text-white;
+    }
+    a.btn-outline-big{
+      @apply border-2 border-white bg-transparent text-white w-full text-center uppercase hover:bg-lightgreen;
+    }
+
+    .copyright{
+      p{
+        @apply text-sm text-white;
+      }
+    }
+  }
+  .right{
+    @apply bg-navbarbg px-8 py-12;
+    ul{
+      @apply mt-10 mb-10;
+    }
+  }
+}
+
+/*End Login box */
