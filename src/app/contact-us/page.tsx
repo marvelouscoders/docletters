@@ -20,7 +20,7 @@ const ContactUs = () => {
 
             <PageBanner
                 text={topBannerText}
-                bg={"/assets/images/medical.png"}
+                bg={'/assets/images/medical.png'}
             />
 
             <section>
