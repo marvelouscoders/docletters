@@ -9,12 +9,20 @@ import Link from 'next/link'
 import React from 'react'
 
 const ContactUs = () => {
+
+    const topBannerText = "<h1 class='h1'>Contact us</h1><p>Get in touch with Pharmacy today. We are here to answer your questions</p>";
+
     return (
         <div>
             <TopCouponCodeBar />
             <TopAccountBar />
             <Navbar />
-            <PageBanner />
+
+            <PageBanner
+                text={topBannerText}
+                bg={'/assets/images/medical.png'}
+            />
+
             <section>
                 <div className="fluid-container bg-navbarbg px-8 py-16">
                     <div className="theme-container">
