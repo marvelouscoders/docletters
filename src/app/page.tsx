@@ -39,8 +39,6 @@ const Home = () => {
 
           <LatestNews/>
 
-          <FAQs/>
-
           <Newsletter/>
 
           <Footer/>
