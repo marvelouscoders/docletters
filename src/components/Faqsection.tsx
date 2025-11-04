@@ -24,14 +24,14 @@ export default function FAQs({ title, faqs }: FAQsProps) {
     <section>
       <div className="fluid-container py-10 sm:py-14 px-4 sm:px-8 md:px-12 lg:px-20">
         <div className="theme-container faqs-section">
-          <h2 className="h2">{title}</h2>
+          <h2 className="h2 mt-0">{title}</h2>
         </div>
 
         <div className="normal-container">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white shadow-md transition-all duration-300"
+              className="bg-white  transition-all duration-300"
             >
               <button
                 onClick={() => toggleFAQ(index)}
@@ -45,8 +45,8 @@ export default function FAQs({ title, faqs }: FAQsProps) {
                 <ChevronDown
                   className={`${
                     openIndex === index
-                    ? "rotate-180 bg-navygreen text-white"
-                    : "bg-white text-navygreen"
+                    ? "rotate-180 bg-white text-navygreen"
+                    : "bg-navygreen text-white"
                   }`}
                 />
               </button>

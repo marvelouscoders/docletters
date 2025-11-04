@@ -489,7 +489,7 @@ ul.circle-bullet-ul{
 }
 
 .faq-button svg {
-  @apply w-5 h-5 sm:w-6 sm:h-6 rounded-full transition-transform duration-300;
+  @apply w-7 h-7 sm:w-6 sm:h-6 rounded-full transition-transform duration-300 shrink-0;
 }
 .answer {
   @apply px-4 sm:px-6 pb-4 sm:pb-5 pt-2 sm:pt-4 

@@ -8,14 +8,11 @@ interface Props {
 const PageBanner = ({ bg, text }: Props) => {
   return (
     <section>
-      <div
-        className="fluid-container px-8 bg-cover bg-center h-full w-full relative"
-        style={{ backgroundImage: `url(${bg})` }}
-      >
-        <div className="page-banner-box">
-          <div dangerouslySetInnerHTML={{ __html: text }} />
+        <div className={`fluid-container px-8 bg-cover bg-center h-full w-full relative`} style={{ backgroundImage: `url(${bg})` }}>
+            <div className="page-banner-box">
+                <div dangerouslySetInnerHTML={{ __html: text }} />
+            </div>
         </div>
-      </div>
     </section>
   )
 }
