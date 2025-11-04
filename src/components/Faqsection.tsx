@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-
 export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -40,48 +39,45 @@ export default function FAQs() {
 
   return (
     <section>
-        <div className=" fluid-container bg-white py-14 px-6 md:px-12 lg:px-20">
-      <div className="theme-container faqs-section">
-        <h2>
-          Frequently Asked Questions
-        </h2>
-      </div>
+      <div className="fluid-container py-10 sm:py-14 px-4 sm:px-8 md:px-12 lg:px-20">
+        <div className="theme-container faqs-section">
+          <h2 className="h2">Frequently Asked Questions</h2>
+        </div>
 
-      <div className="w-5xl mx-auto space-y-5">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="bg-navbarbg shadow-sm  transition-all duration-300"
-          >
-            <button
-              onClick={() => toggleFAQ(index)}
-              className={`w-full flex justify-between items-center text-left px-6 py-4 font-lora text-xl transition-all duration-300 ${
-                openIndex === index
-                  ? "bg-navygreen text-white"
-                  : "white text-dark"
-              }`}
-            >
-              <span>{faq.question}</span>
-              <ChevronDown
-                className={`w-5 h-5 transition-transform duration-300 ${
-                  openIndex === index ? "rotate-180 text-white" : "text-[#00A6A6]"
+        <div className="normal-container">
+          {faqs.map((faq, index) => (
+            <div key={index} className="bg-white shadow-md transition-all duration-300">
+              <button
+                onClick={() => toggleFAQ(index)}
+                className={`faq-button ${
+                  openIndex === index
+                    ? "bg-navygreen text-white"
+                    : "bg-navbarbg text-dark"
                 }`}
-              />
-            </button>
-            <div
-              className={`transition-all duration-300 overflow-hidden ${
-                openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-              }`}
-            >
-              <div className="px-6 pb-5 pt-4   text-gray-600 text-sm md:text-base leading-relaxed">
-                {faq.answer}
+              >
+                <span>{faq.question}</span>
+                <ChevronDown
+                  className={`${
+                    openIndex === index
+                      ? "rotate-180 text-white"
+                      : "text-navygreen"
+                  }`}
+                />
+              </button>
+
+              <div
+                className={`transition-all duration-300 overflow-hidden ${
+                  openIndex === index
+                    ? "max-h-60 sm:max-h-80 opacity-100"
+                    : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="answer">{faq.answer}</div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
     </section>
   );
 }
-
