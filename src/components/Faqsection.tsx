@@ -45,8 +45,8 @@ export default function FAQs({ title, faqs }: FAQsProps) {
                 <ChevronDown
                   className={`${
                     openIndex === index
-                      ? "rotate-180 text-white"
-                      : "text-navygreen"
+                    ? "rotate-180 bg-navygreen text-white"
+                    : "bg-white text-navygreen"
                   }`}
                 />
               </button>

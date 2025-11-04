@@ -1,7 +1,6 @@
 import Banner from '@/components/Banner'
 import Navbar from '@/components/navbar'
 import Service from '@/components/Services'
-import Medical from '@/components/Medical'
 import OurDoctors from '@/components/OurDoctors'
 import LatestNews from '@/components/LatestNews'
 import Columns from '@/components/Columns'
@@ -12,7 +11,7 @@ import Newsletter from '@/components/Newsletter'
 import TopCouponCodeBar from '@/components/TopCouponCodeBar'
 import MedicalSection from '@/components/MedicalSection'
 import WhyChooseUs from '@/components/WhyChooseUs'
-import FAQs from '@/components/Faqsection'
+
 
 const Home = () => {
     return (
