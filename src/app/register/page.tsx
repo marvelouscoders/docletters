@@ -13,6 +13,8 @@ import {
     SelectTrigger,
     SelectValue,
   } from "@/components/ui/select"
+import { Checkbox } from '@radix-ui/react-checkbox'
+import { Label } from '@/components/ui/label'
 
 const Register = () => {
   return (
@@ -28,43 +30,46 @@ const Register = () => {
                     <div className='login-box'>
 
                         <div className='left'>
+                            <div className='bg-navygreen px-8 py-12'>
+                                <h2 className='h2'>Log In Now</h2>
+                                <p className='bold'>Are you a member already?</p>
+                                <p>Use the form below to log in to your account.</p>
 
-                            <h2 className='h2'>Log In Now</h2>
-                            <p className='bold'>Are you a member already?</p>
-                            <p>Use the form below to log in to your account.</p>
+                                <div className='w-full mt-12'>
+                                    <form className="">
 
-                            <div className='w-full mt-12'>
-                                <form className="">
+                                        <div className="grid w-full  gap-6">
 
-                                    <div className="grid w-full  gap-6">
+                                            <div className="form-group">
+                                                <label htmlFor="email" >Email Address</label>
+                                                <input type="email" id="email" placeholder="" className='form-control' />
+                                            </div>
 
-                                        <div className="form-group">
-                                            <label htmlFor="email" >Email Address</label>
-                                            <input type="email" id="email" placeholder="" className='form-control' />
+                                            <div className="form-group">
+                                                <label htmlFor="password" >Password</label>
+                                                <input type="password" id="password" placeholder="" className='form-control  ' />
+                                            </div>
+
+                                            <div className="form-group">
+                                                <Link href="/" className="text-white text-sm text-right cursor-pointer">
+                                                    Forgot Password?
+                                                </Link>
+                                            </div>
+
+                                            <div className="mt-6 flex w-full  items-center justify-center">
+                                                <Link href="/" className="btn-outline-big ">
+                                                    Login Now
+                                                </Link>
+                                            </div>
+
+
                                         </div>
 
-                                        <div className="form-group">
-                                            <label htmlFor="password" >Password</label>
-                                            <input type="password" id="password" placeholder="" className='form-control  ' />
-                                        </div>
-
-                                        <div className="form-group">
-                                            <Link href="/" className="text-white text-sm text-right cursor-pointer">
-                                                Forgot Password?
-                                            </Link>
-                                        </div>
-
-                                        <div className="mt-6 flex w-full  items-center justify-center">
-                                            <Link href="/" className="btn-outline-big ">
-                                                Login Now
-                                            </Link>
-                                        </div>
-
-
-                                    </div>
-
-                                </form>
+                                    </form>
+                                </div>
                             </div>
+                          
+
                         </div>
 
                         <div className='right'>
@@ -73,6 +78,11 @@ const Register = () => {
 
                             <div className='w-full mt-12'>
                                 <form className="space-y-6">
+
+                                    <div className='steps-heading-css'>
+                                        <div className='steps'>01</div>
+                                        <div className='text'>Your Details</div>
+                                    </div>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 w-full  gap-6">
 
@@ -155,13 +165,78 @@ const Register = () => {
 
                                     </div>
 
+                                    <div className='steps-heading-css'>
+                                        <div className='steps'>02</div>
+                                        <div className='text'>Account Details</div>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-1 w-full  gap-6">
+
+                                        <div className="form-group">
+                                            <label htmlFor="email-address" >Email Address</label>
+                                            <input type="email" id="email-address" placeholder="" className='form-control' />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="password" >Password</label>
+                                            <input type="password" id="password" placeholder="" className='form-control' />
+                                        </div>
+
+                                        <div className="form-group">
+                                            <label htmlFor="password" >Re Enter Password</label>
+                                            <input type="password" id="password" placeholder="" className='form-control' />
+                                        </div>
+
+                                    </div>
+
+                                    <div className='steps-heading-css'>
+                                        <div className='steps'>03</div>
+                                        <div className='text'>Your Address</div>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-1 w-full  gap-6">
+
+                                        <div className="form-group">
+                                            <label htmlFor="home-address-1" >Address 1</label>
+                                            <input type="text" id="home-address-1" placeholder="" className='form-control' />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="home-address-2" >Address 2</label>
+                                            <input type="text" id="home-address-2" placeholder="" className='form-control' />
+                                        </div>
+
+                                        <div className="form-group">
+                                            <label htmlFor="home-address-3" >Address 3</label>
+                                            <input type="text" id="home-address-3" placeholder="" className='form-control' />
+                                        </div>
+
+                                        <div className="form-group">
+                                            <label htmlFor="home-city-town" >City/Town</label>
+                                            <input type="text" id="home-city-town" placeholder="" className='form-control' />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="home-postcode" >Postcode</label>
+                                            <input type="text" id="home-postcode" placeholder="" className='form-control' />
+                                        </div>
+
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-1 w-full  gap-6">
+
+                                        <div className="form-group">
+                                            <div className="flex items-center gap-3">
+                                                <Checkbox id="terms"  className='form-check'/>
+                                                <Label htmlFor="terms">Accept terms and conditions</Label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
 
 
                                 </form>
                             </div>
 
 
-                            <div className="mt-6 flex  w-full  items-center justify-center">
+                            <div className="mt-10 flex  w-full  items-center justify-center ">
                                 <Link href="/" className="btn-outline-big w-full text-center uppercase">
                                    Register Now
                                 </Link>
