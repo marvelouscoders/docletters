@@ -2,14 +2,18 @@
 
 
 h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-semibold font-lora mb-4 leading-tight md:leading-tight;
+    @apply text-3xl md:text-4xl lg:text-[46px] font-bold font-lora mb-4 leading-tight md:leading-tight;
 }
 
 h2 {
-    @apply text-2xl md:text-3xl lg:text-[2.75rem] font-semibold font-lora mb-2 mt-2;
+    @apply text-2xl md:text-3xl lg:text-[2.75rem] font-bold font-lora mt-2;
 }
 h2.h2 {
-  @apply text-2xl md:text-3xl lg:text-[2.75rem] font-semibold font-lora mb-4 mt-2;
+  @apply text-base md:text-[20px] lg:text-[20px] font-medium font-lora leading-6;
+}
+
+h2.globel-faq-heading{
+  @apply text-2xl md:text-3xl lg:text-[2.75rem] font-bold font-lora;
 }
 
 h3 {
@@ -17,11 +21,11 @@ h3 {
 }
 
 h3.heading-small {
-  @apply text-xl font-semibold text-gray;
+  @apply text-base font-normal text-gray leading-7;
 }
 
 h3.card-big-heading{
-  @apply mt-5 text-2xl  text-dark
+  @apply mt-5 text-[20px] leading-6 font-semibold text-dark
 }
 
 h3.card-pricing{
@@ -143,10 +147,10 @@ p.text-white {
 
   .fluid-conatiner{
 
-    @apply w-full mx-auto bg-white
+    @apply w-full
   }
   .theme-container{
-    @apply max-w-7xl mx-auto
+    @apply max-w-7xl mx-auto;
   }
 
   .mobile-padding{
@@ -246,6 +250,8 @@ p.text-white {
 }
 /* ====== End Top Account Bar ====== */
 
+
+
 /* ====== Home Doctors section ====== */
 .doctors-card{
   @apply basis-full sm:basis-1/2 lg:basis-1/4 px-4;
@@ -318,33 +324,30 @@ p.text-white {
 .small-box-center{
   @apply absolute hidden md:flex lg:right-[-60px] right-3 top-1/2 -translate-y-1/2 bg-navygreen text-white px-6 py-6 shadow-lg w-[220px] flex-col items-start justify-center;
 }
-
-
 .why-choose-us{
-  @apply grid grid-cols-1 md:grid-cols-2;
+  @apply grid grid-cols-1 md:grid-cols-5; 
+}
 
+.why-us-img-div {
+  @apply h-[400px] md:h-auto md:col-span-2; 
+}
 
-  .why-us-img-div {
-    @apply h-[400px] md:h-auto;
-  }
+.why-us-text-div {
 
-
-  .why-us-text-div{
-    @apply bg-navbarbg py-3 md:py-14 lg:py-16 pl-6 md:pl-16 pr-4 md:pr-4;
-
-    a{
-      @apply mt-4;
-      svg{
-        @apply bg-navygreen text-white shrink-0 rounded-full;
+  @apply md:col-span-3 bg-navbarbg ; 
+  a{
+    @apply mt-4;
+  svg{
+     @apply bg-navygreen text-white shrink-0 rounded-full;
       }
     }
-  }
 }
+
 
 /* End Choose us start */
 
 ul.circle-bullet-ul{
-  @apply space-y-4 mb-6 mt-6 text-sm sm:text-base;
+  @apply space-y-4  mt-6 text-sm sm:text-base;
 
   li{
     @apply flex items-start;
@@ -371,16 +374,14 @@ ul.circle-bullet-ul{
 /* Medical section start */
 
 .medical-scetion{
-  @apply grid grid-cols-1 md:grid-cols-2 max-w-full;
-
-
-
+  @apply grid grid-cols-1 md:grid-cols-2 w-full;
+  
   .medical-image-side{
     @apply h-[400px] md:h-auto;
   }
 
 .medical-text-side {
-   @apply bg-navygreen text-white py-6 sm:pl-12 md:py-14 lg:py-16 pl-6 md:pl-50 pr-16;
+   @apply bg-navygreen text-white py-6 sm:pl-12 md:py-14 lg:py-16 pl-6 md:pl-30 pr-16;
 
 
     a{
@@ -427,12 +428,15 @@ ul.circle-bullet-ul{
 }
 
 /* Start page banner box  */
-.page-banner-box{
-  @apply flex flex-col md:flex-row items-start px-6 py-16 md:py-16 relative z-10;
-  div{
-    @apply  w-full md:w-[30%] bg-white/90 shadow-xl border-8 border-skyblue px-8 py-8 backdrop-blur-sm text-center md:text-left;
+.page-banner-box {
+  @apply flex flex-col md:flex-row items-start px-6 py-16 md:py-16 relative z-10 sm:items-center justify-between;
+
+  div {
+    @apply w-[118%] md:w-[30%] bg-white/90 shadow-xl border-8 border-skyblue px-6 py-8 backdrop-blur-sm text-center items-center justify-between md:text-left;
   }
 }
+
+
 /* End page banner box  */
 
 /* contact-us start  */
@@ -527,4 +531,25 @@ ul.circle-bullet-ul{
       @apply mt-10 mb-10;
     }
   }
+}
+
+
+/* End login box */
+
+
+
+/* Disability medical letter  */
+
+.disability-icons{
+  @apply py-4 mb-6;
+span {
+  @apply flex flex-col items-center text-sm font-medium gap-y-4;
+  
+  svg {
+    @apply w-10 h-10 text-white bg-navygreen rounded-full p-2 shrink-0;
+  }
+
+
+  }
+
 }

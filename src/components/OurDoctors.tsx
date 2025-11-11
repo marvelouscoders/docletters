@@ -51,8 +51,8 @@ const DoctorsSection = () => {
   return (
 
     <section>
-      <div className="fluid-container bg-white py-16 relative">
-      <div className="theme-container px-6">
+      <div className="fluid-container bg-white py-16 relative px-4 md:px-10 lg:px-20">
+      <div className="theme-container">
 
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-8">
           <div>

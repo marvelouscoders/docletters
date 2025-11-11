@@ -17,7 +17,7 @@ const Banner = () => {
         <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
-      <div className="theme-container flex flex-col md:flex-row items-start px-6 py-20 md:py-28 relative z-10">
+      <div className="theme-container flex flex-col md:flex-row items-start px-6 mt-2 py-20 md:py-28 relative z-10">
         <div className="md:w-[40%] w-full bg-white/90 shadow-xl border-8 border-skyblue px-8 py-10 backdrop-blur-sm text-center md:text-left">
           <h1 className="h1">
             Same-day trusted medical letters & certificates
@@ -25,7 +25,7 @@ const Banner = () => {
           <p>
             Get a medical certificate from a private NHS doctor today without the hassle of waiting for a GP appointment.
           </p>
-          <Link href="/" className="btn-link items-center justify-center">
+          <Link href="/" className="btn-link items-start sm:items-center justify-center">
             Get Started 
             <ChevronRight className="chevron-right" />
           </Link>

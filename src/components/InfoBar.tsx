@@ -7,11 +7,12 @@ import { VscWorkspaceTrusted } from "react-icons/vsc";
 const InfoBar = () => {
   return (
     <section>
-    <div className="relative bg-navygreen hidden md:block">
-      <div className="theme-container px-6 flex items-center justify-between h-15">
+       <div className="fluid-container bg-navygreen relative hidden md:block px-4 md:px-10 lg:px-20">
+           <div className="theme-container">
+             <div className=" flex items-center justify-between h-15">
         {/* Item 1 */}
         <div className="flex items-center small-heading">
-          <CiMobile3 className="text-white text-sm" />
+          <CiMobile3 className="text-white text-base" />
           100% online - hassle-free, stress-free
         </div>
 
@@ -39,6 +40,7 @@ const InfoBar = () => {
           Available 7 days a week
         </div>
       </div>
+    </div>
     </div>
     </section>
   );

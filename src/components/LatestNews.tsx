@@ -7,17 +7,17 @@ import Link from "next/link";
 const NewsSection = () => {
   return (
     <section>
-      <div className="fluid-container py-16 bg-white">
-      <div className="theme-container px-6 lg:px-8">
+ <div className="fluid-container bg-white py-16 relative px-4 md:px-10 lg:px-20">
+      <div className="theme-container">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-10">
           <div>
             <h3 className="heading-small">WHAT’S NEWS?</h3>
             <h2>LATEST NEWS</h2>
           </div>
-          <Link href="/">
-            <button className="btn-straight">
+          <Link href="/"
+             className="btn-straight">
               View All Doctors
-            </button>
+            
           </Link>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">

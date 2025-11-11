@@ -42,41 +42,39 @@ const Testimonials = () => {
     })
   );
 
-  return (
+ return (
     <section >
-    <div className="fluid-container bg-navbarbg py-16 relative">
-      <div className="theme-container px-6">
-        <Carousel
-          plugins={[plugin.current]}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full relative"
-        >
-          <CarouselContent>
-            {testimonials.map((t, i) => (
-              <CarouselItem
-                key={i}
-                className="testimonials-card"
-              >
-                <div className="flex flex-col justify-between h-full">
-                  <div>
-                    <FaQuoteLeft />
-                    <p>{t.text}</p>
+    <div className="fluid-container bg-navbarbg py-16 relative px-4 md:px-10 lg:px-20">
+      <div className="theme-container">
+          <Carousel
+            plugins={[plugin.current]}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full relative"
+          >
+            <CarouselContent> 
+              {testimonials.map((t, i) => (
+                <CarouselItem
+                  key={i}
+                  className=" testimonials-card" 
+                >
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <FaQuoteLeft />
+                      <p>{t.text}</p>
+                    </div>
+                    <div className="box-border-left">
+                      <h3 className="h3">{t.name}</h3>
+                      <p >{t.role}</p>
+                    </div>
                   </div>
-                  <div className="box-border-left">
-                    <h3 className="h3">{t.name}</h3>
-                    <p >{t.role}</p>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-    
-
-        </Carousel>
-      </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
       </div>
     </section>
   );

@@ -12,8 +12,8 @@ import { FaTwitter } from "react-icons/fa";
 export default function Footers() {
   return (
     <section>
-      <footer className="bg-dark text-white py-12">
-        <div className="theme-container px-6 sm:px-10 lg:px-16">
+    <div className="fluid-container bg-dark text-white py-16 relative px-4 md:px-10 lg:px-20">
+      <div className="theme-container">
           <div className="footer-grid">
             <div>
               <Image
@@ -111,7 +111,7 @@ export default function Footers() {
             </div>
           </div>
         </div>
-      </footer>
+        </div>
       </section>
   );
 }

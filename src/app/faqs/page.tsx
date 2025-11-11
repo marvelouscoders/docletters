@@ -8,7 +8,7 @@ import TopCouponCodeBar from '@/components/TopCouponCodeBar';
 import React from 'react';
 
 const Page = () => {
-    const topBannerText = "<h1 class='h1'>Frequently Asked Questions</h1><p>If you need help, please contact us at support@pharmacy.co.uk at any time.\n</p>";
+    const topBannerText = "<h1 class='h1'>Frequently Asked Questions</h1><p>If you need help, please contact us at support@pharmacy.co.uk\n</p>";
 
     const medicalFaqs = [
     {
@@ -90,7 +90,7 @@ const Page = () => {
                 bg={'/assets/images/faq-image.jpg'}
             />
             <section>
-               <div className="fluid-container bg-white px-8 py-8">
+               <div className="fluid-container bg-white px-4 py-4">
 
                 <FAQs title="About medical letters " faqs={medicalFaqs} />
 
