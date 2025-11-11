@@ -19,42 +19,43 @@ const Login = () => {
                     <div className='login-box'>
                         
                         <div className='left'>
-                            
-                            <h2 className='h2'>Log In Now</h2>
-                            <p className='bold'>Are you a member already?</p>
-                            <p>Use the form below to log in to your account.</p>
+                            <div className='bg-navygreen px-8 py-12'>
+                                <h2 className='h2'>Log In Now</h2>
+                                <p className='bold'>Are you a member already?</p>
+                                <p>Use the form below to log in to your account.</p>
 
-                            <div className='w-full mt-12'>
-                                <form className="">
-                                   
-                                    <div className="grid w-full  gap-6">
+                                <div className='w-full mt-12'>
+                                    <form className="">
+                                    
+                                        <div className="grid w-full  gap-6">
 
-                                        <div className="form-group">
-                                            <label htmlFor="email" >Email Address</label>
-                                            <input type="email" id="email" placeholder="" className='form-control' />
+                                            <div className="form-group">
+                                                <label htmlFor="email" >Email Address</label>
+                                                <input type="email" id="email" placeholder="" className='form-control' />
+                                            </div>
+
+                                            <div className="form-group">
+                                                <label htmlFor="password" >Password</label>
+                                                <input type="password" id="password" placeholder="" className='form-control  ' />
+                                            </div>
+
+                                            <div className="form-group">
+                                                <Link href="/" className="text-white text-sm text-right cursor-pointer">
+                                                    Forgot Password?
+                                                </Link>
+                                            </div>
+
+                                            <div className="mt-6 flex w-full  items-center justify-center">
+                                                <Link href="/" className="btn-outline-big ">
+                                                    Login Now
+                                                </Link>
+                                            </div>
+                                        
+
                                         </div>
-
-                                        <div className="form-group">
-                                            <label htmlFor="password" >Password</label>
-                                            <input type="password" id="password" placeholder="" className='form-control  ' />
-                                        </div>
-
-                                        <div className="form-group">
-                                            <Link href="/" className="text-white text-sm text-right cursor-pointer">
-                                                Forgot Password?
-                                            </Link>
-                                        </div>
-
-                                        <div className="mt-6 flex w-full  items-center justify-center">
-                                            <Link href="/" className="btn-outline-big">
-                                                Login Now
-                                            </Link>
-                                        </div>
-                                       
-
-                                    </div>
-                                   
-                                </form>
+                                    
+                                    </form>
+                                </div>
                             </div>
                         </div>
 
@@ -72,7 +73,7 @@ const Login = () => {
                             </ul>
 
                             <div className="mt-6 flex  w-full  items-center justify-center">
-                                <Link href="/" className="btn-outline-big w-full text-center">
+                                <Link href="/" className="btn-outline-big w-full text-center uppercase">
                                    Register Now
                                 </Link>
                             </div>

@@ -73,7 +73,7 @@ h5{
 
 /* ====== Dropdown Container (Navbar) ====== */
 .dropdown-container {
-  @apply absolute z-50 bg-navbarbg border border-gray-200 shadow-xl 
+  @apply absolute z-50 bg-navbarbg border border-gray-200 shadow-xl
          transition-all duration-300 ease-in-out py-4;
 }
 
@@ -163,8 +163,8 @@ p.text-white {
 }
 
 .icons-size{
-  @apply text-dark text-xl md:text-xl  
-} 
+  @apply text-dark text-xl md:text-xl
+}
 
 .topheader-text{
   @apply text-[15px] md:text-sm text-gray
@@ -224,7 +224,7 @@ p.text-white {
       span{
         @apply font-normal;
       }
-      
+
     }
     a:hover{
       @apply cursor-pointer
@@ -241,7 +241,7 @@ p.text-white {
       span{
         @apply font-normal;
       }
-      
+
     }
     a:hover{
       @apply cursor-pointer
@@ -288,7 +288,7 @@ p.text-white {
 }
 
 .navbar-dropdown {
-  @apply absolute top-[calc(100%+26px)] z-50 bg-navbarbg border border-gray-200 shadow-xl 
+  @apply absolute top-[calc(100%+26px)] z-50 bg-navbarbg border border-gray-200 shadow-xl
          transition-all duration-300 ease-in-out py-4;
 }
 
@@ -391,15 +391,15 @@ ul.circle-bullet-ul{
       }
     }
     p{
-      @apply text-white 
+      @apply text-white
     }
 
 
     ul.circle-bullet-ul{
-      @apply space-y-2 mb-6 mt-6 text-sm sm:text-base;
+      @apply space-y-3 mb-6 mt-6 text-sm sm:text-base;
 
      li{
-     @apply flex items-start sm:items-start space-y-2;
+     @apply flex items-start sm:items-start ;
      svg{
        @apply text-navygreen bg-white w-5 h-5 mt-0.5 mr-2 shrink-0 rounded-full;
      }
@@ -411,7 +411,7 @@ ul.circle-bullet-ul{
 }
 
 .ul-circle {
-  @apply space-y-2 mb-6 text-sm sm:text-base;
+  @apply space-y-3 mb-6 text-sm sm:text-base;
 
   li {
     @apply flex items-start;
@@ -453,6 +453,10 @@ ul.circle-bullet-ul{
     transition duration-200
   }
 
+  .select-item {
+    @apply focus:bg-navygreen focus:text-white;
+  }
+
   textarea.form-control {
     @apply w-full bg-white h-32 p-3 border-0 rounded-none resize-y
     focus:ring-2 focus:ring-navygreen focus:border-navygreen focus:outline-none;
@@ -476,8 +480,8 @@ ul.circle-bullet-ul{
 }
 
 .faq-button {
-  @apply w-full flex justify-between items-center text-left 
-         px-6 sm:px-6 py-3 sm:py-4 font-lora 
+  @apply w-full flex justify-between items-center text-left
+         px-6 sm:px-6 py-3 sm:py-4 font-lora
          transition-all duration-300;
 }
 
@@ -489,16 +493,16 @@ ul.circle-bullet-ul{
   @apply w-7 h-7 sm:w-6 sm:h-6 rounded-full transition-transform duration-300 shrink-0;
 }
 .answer {
-  @apply px-4 sm:px-6 pb-4 sm:pb-5 pt-2 sm:pt-4 
+  @apply px-4 sm:px-6 pb-4 sm:pb-5 pt-2 sm:pt-4
          text-gray-600 text-sm sm:text-base leading-relaxed;
 }
 
 /*Login box*/
 
 .login-box{
-  @apply grid grid-cols-1 md:grid-cols-2 gap-12;
+  @apply flex flex-col md:flex-row w-full gap-12;
   .left{
-    @apply bg-navygreen px-8 py-12;
+    @apply  w-full md:w-1/2;
     h2{
       @apply text-white;
     }
@@ -526,13 +530,15 @@ ul.circle-bullet-ul{
     }
   }
   .right{
-    @apply bg-navbarbg px-8 py-12;
+    @apply bg-navbarbg px-8 py-12 w-full md:w-1/2;
     ul{
       @apply mt-10 mb-10;
     }
   }
+  .form-check{
+    @apply w-8 h-8 bg-white;
+  }
 }
-
 
 /* End login box */
 
@@ -553,3 +559,87 @@ span {
   }
 
 }
+/* End login box*/
+
+/* Dashbaord left menu */
+
+.user-menu{
+  @apply  bg-navygreen px-4 py-8 flex flex-col gap-2 ;
+
+  a{
+    @apply font-lora w-full p-4  flex text-white font-semibold text-lg gap-3  items-center justify-start; 
+    svg{
+      @apply text-2xl;
+    }
+  }
+  a:hover{
+    @apply bg-lightgreen 
+  }
+  a.active{
+    @apply bg-lightgreen 
+  }
+}
+
+.user-delete-section{
+  @apply bg-lightgreen p-6;
+  .account-delete-box{
+  @apply bg-navygreen w-16 h-16 flex items-center justify-center rounded-full;
+    svg{
+      @apply text-white text-3xl;
+    }
+  }
+  h3{
+    @apply font-extrabold text-lg text-white mt-3;
+  }
+  p{
+    @apply text-white mt-3;
+  }
+  a{
+    @apply bg-dark text-white px-6 py-4 flex items-center justify-center text-center mt-6;
+  }
+  a:hover{
+    @apply bg-dark/50
+  }
+}
+
+
+/* End Dashbaord left menu */
+
+/* Default table css*/
+.defaul-talbe{
+
+  th{
+    @apply bg-navygreen text-white p-4 text-base;
+  }
+  td{
+    @apply  p-4  text-base;
+  }
+}
+
+.small-btn{
+  @apply bg-orange px-3 py-2 text-white;
+}
+.small-btn:hover{
+  @apply bg-orange/90;
+}
+/* End Default table css*/
+
+
+/* For Steps Heading */
+.steps-heading-css{
+  @apply flex items-center justify-start gap-4 mb-8;
+  .steps{
+    @apply flex items-center justify-center bg-navygreen text-white font-lora font-semibold w-10 h-10  rounded-full;
+  }
+  .text{
+    @apply font-semibold text-xl font-lora;
+  }
+}
+/* Ebd form steps css */
+
+
+/* Uplaod doucments */
+.customfile-upload{
+  @apply text-base;
+}
+/* End Upload Documents*/
