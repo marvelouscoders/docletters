@@ -6,8 +6,8 @@ const AboutThisMedicalLetter = () => (
 
 
     <section >
-        <div className="fluid-container py-16 bg-navbarbg">
-            <div className="theme-container px-4 md:px-6">
+        <div className="fluid-container py-12 bg-navbarbg">
+            <div className="theme-container px-4 md:px-4">
                 
                 <div className="text-center mb-12">
                     <h3 className='heading-small'>DISABILITY MEDICAL LETTER</h3>

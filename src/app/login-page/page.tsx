@@ -51,7 +51,7 @@ const LoginPage = () => {
                 <input
                   type="email"
                   placeholder="paul@gmail.com"
-                  className="w-full bg-[#34A9AE] px-4 py-2 focus:outline-none focus:ring-2 "
+                  className="w-full bg-skyblue px-4 py-2 focus:outline-none focus:ring-2 "
                 />
               </div>
 

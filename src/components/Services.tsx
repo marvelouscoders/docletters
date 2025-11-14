@@ -66,7 +66,7 @@ const Service = () => {
         {features.map((item, index) => (
           <div
             key={index}
-            className="bg-white shadow-sm   flex flex-col justify-between transition-all duration-300 relative "
+            className="bg-white shadow-sm  flex flex-col justify-between transition-all duration-300 relative  "
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
@@ -77,11 +77,10 @@ const Service = () => {
                 fill
                 className="w-full h-full object-cover"
               />
-             
             </div>
             <div
               className={`flex-1 flex flex-col justify-between p-2 rounded transition-colors duration-300 ${
-                hoveredIndex === index ? "bg-blue-50" : ""
+                hoveredIndex === index ? "bg-navbarbg" : ""
               }`}
             >
               <div className="px-2">
@@ -90,7 +89,6 @@ const Service = () => {
                 <p>{item.desc}</p>
               </div>
 
-              {/* Button */}
               
               <div className="mt-4 px-2 mb-4">
                 <Link href="/" className="btn-link">

@@ -20,7 +20,7 @@ const Login = () => {
                         
                         <div className='left'>
                             <div className='bg-navygreen px-8 py-12'>
-                                <h2 className='h2'>Log In Now</h2>
+                                <h2>Log In Now</h2>
                                 <p className='bold'>Are you a member already?</p>
                                 <p>Use the form below to log in to your account.</p>
 

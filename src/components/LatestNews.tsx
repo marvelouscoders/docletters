@@ -41,7 +41,6 @@ const NewsSection = () => {
               </div>
             </div>
           </div>
-
           <div className="flex flex-col gap-8 justify-between">
             <div className="flex flex-col sm:flex-row gap-5 items-start">
               <Image

@@ -98,7 +98,7 @@ export default function Navbar() {
   return (
     <section>
     <nav className="fluid-conatiner navbar-border">
-      <div className="flex flex-col xl:flex-row xl:items-center justify-between px-6 py-3 md:px-8 transition-all duration-300">
+      <div className="flex flex-col xl:flex-row xl:items-center justify-between px-8 py-3 md:px-8 transition-all duration-300">
         <div className="flex w-full items-center justify-between xl:hidden">
           <Image
             src="/assets/images/svgfiles/logo-6.svg"

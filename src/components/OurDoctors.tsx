@@ -82,7 +82,7 @@ const DoctorsSection = () => {
                 className="doctors-card"
               >
                 <div className="text-center">
-                  <div className="w-full h-72 overflow-hidden  shadow-md">
+                  <div className="w-full h-72 overflow-hidden shadow-md">
                     <Image
                       src={doc.image}
                       alt={doc.name}

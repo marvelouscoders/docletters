@@ -41,7 +41,7 @@ export default function FAQs({ title, faqs }: FAQsProps) {
                     : "bg-navbarbg text-dark"
                 }`}
               >
-                <h2 className="h2">{faq.question}</h2>
+                <h2 className="faqs-quesstion">{faq.question}</h2>
                 <ChevronDown
                   className={`${
                     openIndex === index

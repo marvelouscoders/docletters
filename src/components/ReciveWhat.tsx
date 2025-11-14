@@ -6,8 +6,8 @@ import React from 'react';
 
 const WhatWillIReceive = () => (
     <section>
-        <div className="fluid-container pt-16 pb-24 bg-navbarbg">
-            <div className="theme-container px-4 md:px-8">
+        <div className="fluid-container pt-12 pb-12 bg-navbarbg">
+            <div className="theme-container px-4 md:px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="order-2 lg:order-1">
                         <h2 >What will I receive?</h2>
